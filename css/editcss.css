@@ -1,0 +1,12 @@
+body {
+	background-image: url("../image/bg.jpg");
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+}
+p{
+	font: italic bold 20px arial;
+	text-align: center;
+ 	color: #00FF00;
+
+ }
+h1{color: #FFF}
