@@ -2,10 +2,14 @@ body {
 font-family: Georgia, 'Times New Roman', Times, serif;
 }
 h1 {
+	padding-left: 30px;
 	color: blue;
 }
 ul {
  list-style-type: none;
+}
+p{
+	font: bold;
 }
 li {
 	/*text-align: center;*/
@@ -13,14 +17,20 @@ li {
 }
 a {
 	text-decoration: none;
-	color: red;
+	color: green ;
 }
 a:hover {
-	color: blue;
+	color: red;
 }
 a:visited {
-color: green;
+color: blue;
 }
 a:active {
-	color: red;
+	color: #9933FF!important;
+}
+.lesson{
+	padding-left: 20px;
+}
+.title{
+	font-weight: bold;
 }
