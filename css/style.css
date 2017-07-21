@@ -1,2 +1,26 @@
-@import url("editcss.css");
-
+body {
+font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h1 {
+	color: blue;
+}
+ul {
+ list-style-type: none;
+}
+li {
+	/*text-align: center;*/
+	text-decoration: none;
+}
+a {
+	text-decoration: none;
+	color: red;
+}
+a:hover {
+	color: blue;
+}
+a:visited {
+color: green;
+}
+a:active {
+	color: red;
+}
