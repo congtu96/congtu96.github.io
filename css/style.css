@@ -1,5 +1,8 @@
 body {
-font-family: Georgia, 'Times New Roman', Times, serif;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	background-image: url(../img/bacground1.gif);
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 h1 {
 	padding-left: 30px;
