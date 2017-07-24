@@ -1,0 +1,134 @@
+.main {
+	font-family: Verdana, Arial, Helvetica, san-serif;
+	width:1300px;
+	height:auto;
+	background: #2D2F35;
+	margin: 0 auto;
+}
+.logo {
+	height: 105px;
+	width: 1263px;
+	margin-top: 1px;
+}
+p{
+	color: white;
+}
+.init1-comment{
+	width: 1263px;
+	height: 4px; 	
+}
+.init1-img{
+	border-top: 0.5px solid #464646;
+	border-bottom: 0.5px solid #464646;
+	background: url(../img/bg_home_intro.gif) repeat-x;
+	width: 1300px;
+	height: 300px;
+	float: left;
+	padding-left: 735px; 
+}
+.title{
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	word-spacing: 8px;
+	letter-spacing: 1px;
+	font-size: 24px;
+	color: yellow;
+	margin-top: 1px;
+}
+.init1-comment .title{
+	padding-top: 5px;
+	padding-left: 120px;
+	word-spacing: 15px;
+}
+.content{
+	font-size: 11.5px;
+	padding-left:120px;
+	padding-top: 1px;
+	width: 355px;
+}
+.init1-comment .content{
+	width: 420px;
+	height: auto;
+	font-size: 12.5px;
+}
+.init2{
+	width: auto;
+	height: auto;
+	text-align: justify;
+	border-top: 0.5px solid #464646;
+
+}
+.init2 .init2-left{
+	float: left;
+	width: 500px;
+	height: auto;
+	padding-top: 2px;
+	background: #2D2F35 url(../img/home_services_bg_design.gif) no-repeat bottom right;
+	margin-left: 1px;
+	text-align: justify;
+}
+.init2-left .title{
+	padding-left: 120px;
+	padding-top: 5px;
+	width: auto;
+	height: auto;
+}
+.init2-left .content{
+	width: 430px;
+	height: 280px;
+	word-spacing: 0.3px;
+	font-size: 11.5px;
+}
+.init2-left .comment-img{
+	margin-left: 2px;
+}
+.init2-right{
+	float: right;
+	width: 550px;
+	height: auto;
+	background: #2D2F35 url(../img/home_services_bg_marketing.gif) no-repeat;
+	margin-right: auto;
+	margin-top: 10px;
+}
+.init2-right .title{
+	width: 450px;
+	word-spacing: 5px;
+}
+.init2-right .content{
+	padding-left: 1px;
+	padding-top: 12px;
+	font-size: 12px;
+	word-spacing: 1px;
+	width:450px;
+	height: auto;
+}
+.list-img{
+	padding-left: 160px;
+}
+.list{
+	float: left;
+	position: relative;
+	padding: 19px;
+	padding-top: 30px;
+}
+.number{
+	position: absolute;
+	right: 22px;
+	top: 30px;
+}
+.footer{
+	text-align: center;
+	background: #24262a;
+	margin-top: auto;
+	border-top: 0.5px solid #464646;
+}
+.footer .footer-title{
+		color:#e3e3e3;
+		margin-top: 1px;
+		font-size: 11px;
+}
+.footer .img-footer{
+	padding-top: 5px;
+}
+.clean{
+	clear:both;
+}
