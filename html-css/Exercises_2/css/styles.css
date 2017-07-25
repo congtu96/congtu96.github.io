@@ -13,6 +13,7 @@
 p{
 	color: white;
 }
+/*init1*/
 .init1-comment{
 	width: 1263px;
 	height: 4px; 	
@@ -50,6 +51,7 @@ p{
 	height: auto;
 	font-size: 12.5px;
 }
+/*init2*/
 .init2{
 	width: auto;
 	height: auto;
@@ -101,6 +103,7 @@ p{
 	width:450px;
 	height: auto;
 }
+/*list image*/
 .list-img{
 	padding-left: 160px;
 }
@@ -115,6 +118,7 @@ p{
 	right: 22px;
 	top: 30px;
 }
+/*footer*/
 .footer{
 	text-align: center;
 	background: #24262a;
