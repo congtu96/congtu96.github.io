@@ -1,0 +1,152 @@
+body{
+	width: 1031px;
+	font-family: arial;
+	font-size: 0.6875em;
+	min-height: 585px;
+	letter-spacing: 0.2px;
+	margin: 0 auto;
+	background-color: #121214
+}
+p{
+	color: #595959;
+}
+.title{
+	color: white;
+}
+/*header*/
+.header{
+	padding-top: 40px;
+	width: 450px;
+	height: 50px;
+}
+/*content left*/
+.left{
+	width: 45%;
+	height: auto;
+	float: left;
+	padding-left: 5px;
+}
+.init1{
+	width: 100%;
+	height: 100%
+}
+.init1 .img{
+	float: left;
+	width: 140px;
+	height: 90px;
+	padding-top: 15px;
+	padding-right: 20px;
+	padding-bottom: 10px;
+}
+.init1 .comment{
+	float: right;
+	width: 250px;
+	padding-right: 45px;
+	height: auto;
+}
+.init1 .comment-content{
+	width: 265px;
+}
+.init2{
+	padding-left: 15px;
+}
+.init2 .comment-content{
+	padding-bottom: 7px;
+}
+.init2 .moreinfo{
+	color: white;
+	text-decoration: none;
+}
+.init2 .init2-comment .title{
+	margin-top: 70px;
+}
+.init2 .init2-comment .comment-content{
+	margin-top: -10px;
+	letter-spacing: 0.5px;
+}
+.moreinfo::before{
+	content: url(../img/arr_1.gif);
+	padding-right: 8px;
+}
+
+/*ul table*/
+.table{
+	line-height: 23px;
+
+}
+.table-left{
+	float: left;
+	padding-left: 1px;
+}
+.table-right{
+	float: right;
+	padding-right: 15px;
+}
+/*content right*/
+.right{
+	width: 250px;
+	height: 400px;
+	background-color: #232326;
+	float: right;
+	margin-right: 270px;
+	margin-top: 45px;
+	text-align: center;
+}
+.right .info{
+	color: red;
+	padding-top: 75px;
+}
+.right .hr{
+	width: 200px;
+	border: 1px solid #C0C0C0;
+	opacity: 0.1;
+}
+.right .logo{
+	padding-top: 20px;
+}
+.right .title1{
+	text-align: left;
+	padding-left: 45px;
+	width: 154px;
+	margin-top: 20px;
+}
+.right .title2{
+	text-align: left;
+	padding-left: 45px;
+	margin-top: -7px;
+	
+}
+.right .title2 .title span{
+	color: #595959;
+}
+.right .title2 .comment-content{
+	margin-top: -10px;
+}
+.right .info .moreinfo{
+	text-align: left;
+	padding-top: 20px;
+	padding-left: 45px;
+}
+.clean{
+	clear: both;
+}
+.hr{
+	border: 1px dotted #C0C0C0;
+	opacity: 0.2;
+}
+
+ul{
+	list-style-type: none;
+}
+li{
+	list-style-type: none;
+}
+.icon::before{
+	content: url(../img/arr.gif);
+}
+a{
+	color: #595959;
+}
+a:hover{
+	color: green;
+}
