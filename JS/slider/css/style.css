@@ -1,0 +1,54 @@
+body{
+
+}
+.logo{
+	height: 80px;
+	width: auto;
+}
+.main{
+	height: 700px;
+	width: 1200px;
+	border: 2px dotted red;
+	margin: auto;
+}
+.slider{
+	height: 500px;
+	width: 900px;
+	padding-left: 150px;
+	padding-top: 20px;
+	position: relative;
+	border: 2px dotted blue;
+}
+.images{
+	height: 500px;
+	width: 900px;
+	position: absolute;
+	opacity: 0;
+}
+.slider button{
+	cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border: #ffffff 0.5px solid;
+    opacity: 0.6;
+}
+.slider .pre{
+    float: left;
+    top: 230px;
+    left: 20px;
+}
+.slider .next{
+    float: right;
+    top: 230px;
+    right: 20px;
+   
+}
+.status {
+
+}
+.bar{
+	position: relative;
+	
+}
