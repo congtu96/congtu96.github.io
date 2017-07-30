@@ -48,7 +48,6 @@ body{
     float: right;
     top: 230px;
     right: 5px;
-   
 }
 .status {
 	margin-top: auto;
@@ -64,7 +63,6 @@ body{
 	opacity: 0.3;
 	-moz-transition: opacity 0.5s ease;
 	-webkit-transition: opacity 0.5s ease;
-
 }
 .point:hover {
 	opacity: 1;

@@ -1,0 +1,49 @@
+#calendar{
+	width: 360px;
+	height: auto;
+	border: 2px solid red;
+	background-color: #d3bebe;
+}
+.button_Control {
+	background-color: #f5d5d5;
+}
+.class_R_month {
+	background-color: #aeaee1 ;
+}
+#idBtn_L_month{
+	background-color: #aeaee1;
+}
+#dayName{
+	padding-top: 5px;
+}
+#dayName td{
+	background-color: #ff0b0b;
+	width: 50px;
+	text-align: center;
+	white-space: 5px;
+	color: white;
+}
+#table{
+	text-align: right;
+}
+#row{
+	
+	background-color: #f6e7e7;
+	height: 20px;
+}
+#colum{
+	width: 50px;
+}
+.today {
+	color: white;
+	background-color: red;
+}
+.active{
+	color: white;
+	text-align: center;
+	background-color: blue;
+}
+.default{
+	background-color: #f6e7e7;
+	color: black;
+}

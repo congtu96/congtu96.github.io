@@ -1,93 +1,105 @@
-var IndexCurrent = 0; //Default value when load page
-var loop = true;  // Loop is start
-var showbutton =true;  //Show button arrow
-var duration = 5000; //time loop 
-var call = true;//Flag to call next or previous image
+var INDEX_CURRENT = 0; //Default value when load page
+var LOOP = true;  // LOOP is start
+var DURATION = 5000; //time LOOP 
+var CALL = true;//Flag to CALL next or previous image
 //Array images taken from class name image
-var List_img = document.getElementsByClassName("slider")[0].getElementsByClassName("images");
+var LIST_IMG = document.getElementsByClassName("slider")[0].getElementsByClassName("images");
 //Array point status following slide image
-var Bar_status= document.getElementsByClassName("status")[0].getElementsByClassName("point");
-//func set a image
+var BAR_STATUS = document.getElementsByClassName("status")[0].getElementsByClassName("point");
+/*
+* Set image
+* @para indexOld
+* indexOld (nums) current image to next image
+*/
 function setImage(indexOld){
-     for(i = 0; i < List_img.length; i++){
+     for(i = 0; i < LIST_IMG.length; i++){
          if(i != indexOld)
-            List_img[i].style.opacity = 0;
+            LIST_IMG[i].style.opacity = 0;
     }
     var opacity = 0;
     var opacityImageOld = 1;
     var setOpacity =  setInterval(function (){
-            List_img[IndexCurrent].style.opacity = opacity;
-            List_img[indexOld].style.opacity = opacityImageOld;
+            LIST_IMG[INDEX_CURRENT].style.opacity = opacity;
+            LIST_IMG[indexOld].style.opacity = opacityImageOld;
             if(opacity >= 1 && opacityImageOld <= 0){
-                call = true;
+                CALL = true;
                 clearInterval(setOpacity);
                 return;
             }
             opacity += 0.02;
-            opacityImageOld -= 0.02;    
-    }, duration / 200); 
+            if(opacityImageOld > 0)
+                opacityImageOld -= 0.02;
+            if(opacityImageOld < 0)
+                opacityImageOld = 0;
+    }, DURATION / 200); 
 }
-//mouse event
-function MouseIn(n) {
-    loop=false;
-    call=false;
-    for (i=0; i<Bar_status.length;i++)
-        if (i==n)
-            Bar_status[i].style.opacity=1;
-        else Bar_status[i].style.opacity=0.3;
+/*onmouseover
+* @para n
+* n is nums image under slider
+*/
+function mouseIn(n) {
+    LOOP = false;
+    CALL = false;
+    for (i = 0; i < BAR_STATUS.length; i++)
+        if (i == n)
+            BAR_STATUS[i].style.opacity = 1;
+        else BAR_STATUS[i].style.opacity = 0.3;
 }
-function MouseOut(){
-    loop=true;
-    call=true;
-    for (i=0; i<Bar_status.length;i++)
-        Bar_status[i].style.opacity=0.3;
+/*onmouseout*/
+function mouseOut(){
+    LOOP = true;
+    CALL = true;
+    for (i=0; i<BAR_STATUS.length;i++)
+        BAR_STATUS[i].style.opacity=0.3;
 }
-//Select picture under slide
-function Select(n){
-    oop=false;
-    call=false;
-    IndexCurrent=n;
-    for(i = 0; i < List_img.length; i++){
+/*select picture under slide
+* @para n
+* n is nums image under slider
+*/
+function selectImg(n){
+    LOOP = false;
+    CALL = false;
+    INDEX_CURRENT = n;
+    for(i = 0; i < LIST_IMG.length; i++){
          if(i != n)
-            List_img[i].style.opacity = 0;
+            LIST_IMG[i].style.opacity = 0;
     }
-     List_img[n].style.opacity = 1;
+     LIST_IMG[n].style.opacity = 1;
 }
-//func get next image
+/*get next image*/
 function getNextImage(){
-    if(call == false){
+    if(CALL == false){
         return;
     }
-    if(IndexCurrent == List_img.length - 1){
-        IndexCurrent = 0;
-        setImage( List_img.length - 1);
+    if(INDEX_CURRENT == LIST_IMG.length - 1){
+        INDEX_CURRENT = 0;
+        setImage( LIST_IMG.length - 1);
     }
     else {
-         IndexCurrent++;
-         setImage(IndexCurrent - 1);
+         INDEX_CURRENT++;
+         setImage(INDEX_CURRENT - 1);
     }
-    call = false;
+    CALL = false;
 }
-//func get previous image
+/*get previous image*/
 function getPrevImage(){
-    if(call == false){
+    if(CALL == false){
         return;
     }
-    if(IndexCurrent == 0){
-        IndexCurrent = List_img.length - 1;
+    if(INDEX_CURRENT == 0){
+        INDEX_CURRENT = LIST_IMG.length - 1;
         setImage( 0);
     }
-    else {  
-         IndexCurrent--;
-         setImage(IndexCurrent + 1);
+    else {
+         INDEX_CURRENT--;
+         setImage(INDEX_CURRENT + 1);
     }
-    call = false;
+    CALL = false;
 }
-//func auto slide with default time
+/*auto slider with default time*/
 function initSlider(){
-    List_img[IndexCurrent].style.opacity = 1;
-    if(loop){
-            setInterval(getNextImage, duration);
+    LIST_IMG[INDEX_CURRENT].style.opacity = 1;
+    if(LOOP){
+            setInterval(getNextImage, DURATION);
     }
 }
-
