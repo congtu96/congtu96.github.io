@@ -240,6 +240,7 @@ function create_Empty_Calendar() {
     var btn_L_Year = document.createElement("button");
     btn_L_Year.id = "idBtn_L_year";
     btn_L_Year.innerHTML = "&lt;";
+    btn_L_Year.type = "button";
     btn_L_Year.setAttribute("onclick","minusYear()");
     btn_L_Year.classList.add("button_Control");
     header.appendChild(btn_L_Year);
@@ -258,6 +259,7 @@ function create_Empty_Calendar() {
     var btn_R_Year = document.createElement("button");
     btn_R_Year.id = "idBtn_R_year";
     btn_R_Year.innerHTML = "&gt;";
+    btn_R_Year.type = "button";
     btn_R_Year.setAttribute("onclick","addYear()");
     btn_R_Year.classList.add("button_Control");
     header.appendChild(btn_R_Year);
@@ -266,6 +268,7 @@ function create_Empty_Calendar() {
     var btn_L_Month = document.createElement("button");
     btn_L_Month.id = "idBtn_L_month";
     btn_L_Month.innerHTML ="&lt;";
+    btn_L_Month.type = "button";
     btn_L_Month.setAttribute("onclick","minusMonth()");
     btn_L_Month.classList.add("button_Control");
     header.appendChild(btn_L_Month);
@@ -284,6 +287,7 @@ function create_Empty_Calendar() {
     var btn_R_Month = document.createElement("button");
     btn_R_Month.id = "idBtn_R_month";
     btn_R_Month.innerHTML = "&gt;";
+    btn_R_Month.type = "button";
     btn_R_Month.setAttribute("onclick","addMonth()");
     btn_R_Month.classList.add("button_Control");
     btn_R_Month.classList.add("class_R_month");
