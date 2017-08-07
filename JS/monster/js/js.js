@@ -329,9 +329,8 @@ function clickStop (mouseX, mouseY, _button) {
 		for (var i = monster.length - 1; i >= 0; i--) {
 			monster[i].visible = false;
 		}
+		heart = 0;
 		update();
-		_pause = true;
-		Stop();
 	}
 }
 /*Stop game*/
