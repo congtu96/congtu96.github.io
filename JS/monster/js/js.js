@@ -367,4 +367,3 @@ function eatPointPlus(mouseX, mouseY, _plus) {
 		_plus.visible = false;
 	}
 }
-
