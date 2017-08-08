@@ -170,13 +170,7 @@ function update() {
 	if (heart <= 0) {
 		Stop();
 	}
-	if (_stop) {
-		speed = 2;
-		caneReqAnimateion(update);
 		reqAnimation(update);
-	} else {
-		reqAnimation(update);
-	}
 }
 /*Start game*/
 function start() {
@@ -191,7 +185,7 @@ function start() {
 		var monster4 = new Monster(0, 320, 0, 320, 200, 320, 200, 320, false);
 		var monster5 = new Monster(420, 320, 420, 320, 200, 300, 300, 300, false);
 		var monster6 = new Monster(0, 420, 0, 520, 200, 300, 200, 300, false);
-		var monster7 = new Monster(200, 520, 200, 520, 200, 300, 300, 300, true);
+		var monster7 = new Monster(200, 520, 200, 520, 200, 300, 300, 300, false);
 		var monster8 = new Monster(420, 420, 420, 420, 200, 300, ranX, ranY, false);
 		monster = [monster1, monster2, monster3, monster4, monster5, monster6, monster7, monster8];
 		var btnPause = new Button(450, 10, true);
@@ -307,7 +301,7 @@ function clickPause (mouseX, mouseY, _button) {
 }
 function clickRestart (mouseX, mouseY, _button) {
 
-	if (mouseX > 400 && mouseX <= 400 + 30 && mouseY > 10 && mouseY <= 10 + 30) {
+	if (mouseX > 400 && mouseX <= 400 + 40 && mouseY > 10 && mouseY <= 10 + 30) {
 		timeRun = 20;
 		point = 100;
 		_boom = 3;
@@ -327,10 +321,12 @@ function Stop() {
    	}
    	_runningGame = false;
    	if (!_runningGame) {
-   		context.drawImage(imgOver, 0, 0, 500, 700);
-   		context.drawImage(imgRestart, 400, 10, 30, 30);
-   		context.fillText("Hight Score: " + hightScore, 150, 100);
-   		context.fillText("Score: " + point, 150, 150);
+   		context.drawImage(imgOver, 0, 0, 500, 700);   		
+   		context.fillText("Hight Score: " + hightScore, 150, 200);
+   		context.fillText("Score: " + point, 150, 250);
+   		context.fillStyle = "red";
+   		context.font = "20px arial";
+   		context.fillText("Play" , 400, 32);
    	}
    	speed = 2;
 }
