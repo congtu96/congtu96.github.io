@@ -49,7 +49,6 @@ function checkInput(textIn) {
 
     return 0;
 }
-
 /**
 * Clear calendar
 **/
@@ -77,11 +76,11 @@ function set_Calendar(){
         colum[i].innerHTML = CURR_DAY[i];
     }
     for (var i = colum.length - 1; i >= 7; i--) {
-            if (i-7 == first)
-               {
-                    colum[i].innerHTML = "first";
-                    flag = i;
-               }   
+        if (i-7 == first)
+      	{
+           	colum[i].innerHTML = "first";
+            flag = i;
+        }   
     }
     // all arr tag <td>, [0-7] = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']: day of week 
     // fill day of month
@@ -91,7 +90,7 @@ function set_Calendar(){
         colum[i].innerHTML = index;
         // add event click for a day to get date
         colum[i].addEventListener("click", function() {
-             aDay(this);
+           aDay(this);
         });
         var tmp = new Date();// use to get month and year at present
         if (CURR_MONTH == tmp.getMonth() + 1 && CURR_YEARS == tmp.getFullYear())
@@ -119,7 +118,6 @@ function aDay(day) {
             }
     day.classList.add("active");
 }
-
 /**
 * Summation month
 **/
@@ -135,7 +133,6 @@ function addMonth() {
     clear_Calendar();
     set_Calendar();  
 }
-
 /**
 * Subtraction month
 **/
@@ -151,7 +148,6 @@ function minusMonth() {
     clear_Calendar();
     set_Calendar();
 }
-
 /**
 * Summation year
 **/
@@ -167,7 +163,6 @@ function addYear() {
     clear_Calendar();
     set_Calendar(); 
 }
-
 /**
 * Subtraction year
 **/
@@ -183,7 +178,6 @@ function minusYear() {
     clear_Calendar();
     set_Calendar(); 
 }
-
 /**
 * Select month in option box
 **/
@@ -198,7 +192,6 @@ function choseMonth() {
     clear_Calendar();
     set_Calendar();
 }
-
 /**
 * Select year in option box
 **/
@@ -213,7 +206,6 @@ function choseYear() {
     clear_Calendar();
     set_Calendar();
 }
-
 /**
 * Clear table calendar
 **/
@@ -234,7 +226,6 @@ function create_Empty_Calendar() {
 /*========= CREATE DIV HEADER OF CALENDAR =========*/
     var header = document.createElement("div");
     header.id = "id_header";
-    
     /*--- create div year ---*/
     /*create button left of year*/
     var btn_L_Year = document.createElement("button");
