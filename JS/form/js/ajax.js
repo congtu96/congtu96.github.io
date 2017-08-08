@@ -1,28 +1,22 @@
-var CHECK_USER_NAME;
-var CHECK_PASSWORD;
-var CHECK_EMAIL;
-var CHECK_BIRTH_DAY;
-var CHECK_DATE;
-var OK = "green";
-var NOT = "red";
-
-//USER_NAME = document.getElementById("idName").value;
-
-
+var CHECK_USER_NAME; //type boolean check user name
+var CHECK_PASSWORD; //type boolean check password
+var CHECK_EMAIL; //type boolean check email
+var CHECK_BIRTH_DAY; //type boolean check birth day
+var CHECK_DATE; //type boolean check user date
+var OK = "green"; //status checked
+var NOT = "red"; //status  not checked
 /**
 * Submit data 
 * Last check and send data to server
 */
-function btnSubmit(){
+function btnSubmit() {
 	var _username = document.getElementById("idName");
 	var _pass = document.getElementById("idPass");
 	var _email = document.getElementById("idEmail");
 	var _birthDay = document.getElementById("out-date");
 	var _checkName = document.getElementById("check-name");
 	var _checkPass = document.getElementById("check-pass");
-	//console.log(_username.value);
-	if (checkPass(_pass) && checkUserName(_username) && checkEmail(_email) && checkDate(_birthDay)){
-		//alert("Submit");
+	if (checkPass(_pass) && checkUserName(_username) && checkEmail(_email) && checkDate(_birthDay)) {
 		var xhttp;
 		if (window.XMLHttpRequest) {
  			xhttp = new XMLHttpRequest();
@@ -30,7 +24,6 @@ function btnSubmit(){
  		else {
  			xhttp = new ActiveXObject("Microsoft.XMLHTTP");
  		}
-        
   		xhttp.onreadystatechange = function() {
 	    	if (this.readyState == 4 && this.status == 200) {
 	      		_checkName.innerHTML = this.responseText;
@@ -58,17 +51,17 @@ function checkUserName(name) {
 		error.innerHTML = "";
 		return CHECK_USER_NAME = false;
 	}
-	if (name.value.length < 6){
+	if (name.value.length < 6) {
 		error.innerHTML = "Short, username is not valid";
 		error.style.color = NOT;
 		return CHECK_USER_NAME = false;
 	}
-	if (name.value.length > 30){
+	if (name.value.length > 30) {
 		error.innerHTML = "Max length <= 30 character";
 		error.style.color = NOT;
 		return CHECK_USER_NAME = false;
 	}
-	if (name.value.length > 6 && name.value.length <= 30){
+	if (name.value.length > 6 && name.value.length <= 30) {
 		error.innerHTML = "OK";
 		error.style.color = OK;
 		return CHECK_USER_NAME = true;
@@ -86,12 +79,12 @@ function checkPass(name) {
 		error.innerHTML = "";
 		return CHECK_USER_NAME = false;
 	}
-	if (name.value.length < 6){
+	if (name.value.length < 6) {
 		error.innerHTML = "Short, password is not valid";
 		error.style.color = NOT;
 		return CHECK_USER_NAME = false;
 	}
-	if (name.value.length > 30){
+	if (name.value.length > 30) {
 		error.innerHTML = "Max length <= 30 character";
 		error.style.color = NOT;
 		return CHECK_USER_NAME = false;
@@ -185,7 +178,7 @@ function checkDate(name) {
 /**
 * Reset all value in form
 */
-function reset(){
+function reset() {
 	CHECK_USER_NAME = false;
 	CHECK_PASSWORD = false;
 	CHECK_EMAIL = false;

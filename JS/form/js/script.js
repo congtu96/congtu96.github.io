@@ -45,8 +45,9 @@ function checkInput(textIn) {
     // regex DD/MM/YYYY
     var reg = "(([1-9]{1}|0[1-9]{1}|[1-2]{1}[0-9]{1}|3[0-1]{1})[-|/]([1-9]{1}|0[1-9]|1[0-2])[-|/]([0-9]{4}))";
     var regexDate = new RegExp(reg).test(textIn)
-    if (regexDate) { return 1; }
-
+    if (regexDate) {
+    	return 1;
+    }
     return 0;
 }
 
@@ -77,11 +78,11 @@ function set_Calendar(){
         colum[i].innerHTML = CURR_DAY[i];
     }
     for (var i = colum.length - 1; i >= 7; i--) {
-            if (i-7 == first)
-               {
-                    colum[i].innerHTML = "first";
-                    flag = i;
-               }   
+        if (i-7 == first)
+            {
+                colum[i].innerHTML = "first";
+                flag = i;
+            }   
     }
     // all arr tag <td>, [0-7] = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']: day of week 
     // fill day of month
@@ -236,7 +237,6 @@ function create_Empty_Calendar() {
 /*========= CREATE DIV HEADER OF CALENDAR =========*/
     var header = document.createElement("div");
     header.id = "id_header";
-    
     /*--- create div year ---*/
     /*create button left of year*/
     var btn_L_Year = document.createElement("button");

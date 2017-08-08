@@ -1,8 +1,7 @@
-
 /*Variable Image*/
 var imgBackground = new Image();
-var imgHeart =  new Image();
-var imgPause =  new Image();
+var imgHeart = new Image();
+var imgPause = new Image();
 var imgRestart = new Image();
 var imgStop = new Image();
 var imgBoom = new Image();
@@ -47,8 +46,6 @@ var hightScore = 0;
 var keyPointPlus = 0;
 var _plus; // point plus
 var reqAnimation = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame;
-var caneReqAnimateion = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
-
 /**
 * Load game
 */
@@ -69,10 +66,8 @@ function loadGame() {
 function playGame() {
 	if (!_stop) {
 		loadGame();
-		//setInterval("update()", 15);
 		update();
 	}
-	
 }
 /** Class monster
 * initX: x default
@@ -90,7 +85,7 @@ function Monster(initX, initY, x, y, fromX, fromY, toX, toY, visible) {
 	this.x = x;
 	this.y = y;
 	this.fromX = fromX;
-	this.fromY = fromY; 
+	this.fromY = fromY;
 	this.toX = toX;
 	this.toY = toY;
 	this.visible = visible;
@@ -107,7 +102,6 @@ Monster.prototype.move = function() {
 		this.fromX = this.initX;
 		this.fromY = this.initY;
 	}
-
 	if (this.x < this.fromX) {
 		this.x += speed;
 	} else if (this.x > this.fromX) {
@@ -123,7 +117,6 @@ Monster.prototype.move = function() {
 		point -= 10;
 		killed(this);
 		randomMonster();
-
 	if (heart > 0) {
 			heart--;
 			point +=5;
@@ -181,12 +174,9 @@ function update() {
 		speed = 2;
 		caneReqAnimateion(update);
 		reqAnimation(update);
-		
-		
 	} else {
 		reqAnimation(update);
 	}
-	
 }
 /*Start game*/
 function start() {
@@ -204,14 +194,12 @@ function start() {
 		var monster7 = new Monster(200, 520, 200, 520, 200, 300, 300, 300, true);
 		var monster8 = new Monster(420, 420, 420, 420, 200, 300, ranX, ranY, false);
 		monster = [monster1, monster2, monster3, monster4, monster5, monster6, monster7, monster8];
-
 		var btnPause = new Button(450, 10, true);
 		var btnRestart = new Button(400, 10, true);
 		var btnBoom = new Button(10, 80, true);
 		_plus = new pointPlus (200, 300, 1, false);
 		arrButton = [btnRestart, btnPause, btnBoom];
 	    randomMonster();
-	    
 	} else {
 		_stop = true;
 		_runningGame = false;
@@ -225,7 +213,6 @@ function start() {
 function killMonster(mouseX, mouseY, _monster) {
 	// if position mouse in size of monster -> kill monster and random create new monster
     if (mouseX > _monster.x && mouseX <= _monster.x + size && mouseY > _monster.y && mouseY <= _monster.y + size && _monster.visible) {
-        
         	keyPointPlus +=1;
         	killed(_monster);
         	if (point <= 150) {
@@ -287,7 +274,7 @@ function killed (monster) {
 * @_button: position button (x, y)
 */
 function clickBoom(mouseX, mouseY, _button) {
-	if (mouseX > _button.positionX && mouseX <=  _button.positionX + 40 && mouseY > 100 && mouseY <= 100 + 40) {
+	if (mouseX > _button.positionX && mouseX <= _button.positionX + 40 && mouseY > 100 && mouseY <= 100 + 40) {
 		if (_boom > 0) {
 			for (var i = 0; i < monster.length; i++) {
 				if (monster[i].visible) {
@@ -308,7 +295,7 @@ function clickBoom(mouseX, mouseY, _button) {
 function clickPause (mouseX, mouseY, _button) {
 	//Pause game
 	_stop = false;
-	if (mouseX >  _button.positionX && mouseX <=   _button.positionX + 30 && mouseY > 10 && mouseY <= 10 + 30) {
+	if (mouseX >  _button.positionX && mouseX <= _button.positionX + 30 && mouseY > 10 && mouseY <= 10 + 30) {
 		_pause = true;
 		_runningGame = false;
 	}
@@ -316,12 +303,11 @@ function clickPause (mouseX, mouseY, _button) {
 	if (mouseX > 200 && mouseX <=  200 + 100 && mouseY > 250 && mouseY <= 250 + 60) {
 		_pause = false;
 		_runningGame = true;
-
 	}
 }
 function clickRestart (mouseX, mouseY, _button) {
 
-	if (mouseX > 400 && mouseX <=  400 + 30 && mouseY > 10 && mouseY <= 10 + 30) {
+	if (mouseX > 400 && mouseX <= 400 + 30 && mouseY > 10 && mouseY <= 10 + 30) {
 		timeRun = 20;
 		point = 100;
 		_boom = 3;
@@ -350,7 +336,7 @@ function Stop() {
 }
 /*Set new game*/
 function newGame(mouseX, mouseY) {
-	if (mouseX > 200 && mouseX <=  200 + 100 && mouseY > 250 && mouseY <= 250 + 60) {
+	if (mouseX > 200 && mouseX <= 200 + 100 && mouseY > 250 && mouseY <= 250 + 60) {
 		_stop = false;
 		timeRun = 20;
 		point = 100;
@@ -362,7 +348,7 @@ function newGame(mouseX, mouseY) {
 	}
 }
 function eatPointPlus(mouseX, mouseY, _plus) {
-	if (mouseX > _plus.x && mouseX <=  _plus.x + 60 && mouseY > _plus.y && mouseY <= _plus.y + 60) {
+	if (mouseX > _plus.x && mouseX <= _plus.x + 60 && mouseY > _plus.y && mouseY <= _plus.y + 60) {
 		heart ++;
 		_plus.visible = false;
 	}
