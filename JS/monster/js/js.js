@@ -34,9 +34,9 @@ var _pause;
 * Variable heart, array monster, speed of monster, score, time run, nums bom current, nums boom, point when kill monster
 * array button: pause, stop, restart, boom
 */
-var heart = 4;
+var heart = 3;
 var monster = [];
-var speed = 1;
+var speed = 2;
 var score = "100";
 var timeRun = 20;
 var _boom = 3;
@@ -47,6 +47,8 @@ var hightScore = 0;
 var keyPointPlus = 0;
 var _plus; // point plus
 var reqAnimation = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame;
+var caneReqAnimateion = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
+
 /**
 * Load game
 */
@@ -65,9 +67,11 @@ function loadGame() {
 * Load game and loop
 */
 function playGame() {
-	loadGame();
-	//setInterval("update()", 15);
-	update();
+	if (!_stop) {
+		loadGame();
+		//setInterval("update()", 15);
+		update();
+	}
 	
 }
 /** Class monster
@@ -122,6 +126,7 @@ Monster.prototype.move = function() {
 
 	if (heart > 0) {
 			heart--;
+			point +=5;
 	}
 	else {
 			running = false;
@@ -148,7 +153,6 @@ function update() {
 	    context.drawImage(imgPause, 450, 10, 30, 30);
 	    context.drawImage(imgRestart, 400, 10, 30, 30);
 	    context.drawImage(imgBoom, 10, 80, 60, 60);
-	    context.drawImage(imgStop, 350, 10, 30, 30);
 	    context.fillText("x " + heart, 30, 55);
 	    context.fillText("x " + _boom, 50, 135);
 	    if (_plus.visible) {
@@ -167,16 +171,22 @@ function update() {
 	    	_plus.visible = true;
 	    	keyPointPlus = 0;
 	    }
-	    if (keyPointPlus == 8){
-	    	randomMonster();
-	    }
 	} else {
 		context.drawImage(imgPlay, 200, 250, 100, 60);
 	}
 	if (heart <= 0) {
 		Stop();
 	}
-	reqAnimation(update);
+	if (_stop) {
+		speed = 2;
+		caneReqAnimateion(update);
+		reqAnimation(update);
+		
+		
+	} else {
+		reqAnimation(update);
+	}
+	
 }
 /*Start game*/
 function start() {
@@ -185,22 +195,21 @@ function start() {
 	if (heart > 0) {
 	    var ranX = Math.floor(Math.random()*(400-2*20)) + 20;
 	    var ranY = Math.floor(Math.random()*(200-2*20)) + 20;
-	    var monster1 = new Monster(10, 10, 10, 60, 200, 300, 200, 300, false);
-		var monster2 = new Monster(210, 0, 210, 0, 200, 300, 300, 200, false);
-		var monster3 = new Monster(420, 0, 420, 0, 200, 300, 300, 200, false);
-		var monster4 = new Monster(0, 310, 0, 310, 200, 300, 200, 300, false);
-		var monster5 = new Monster(420, 310, 420, 310, 200, 300, 300, 300, false);
-		var monster6 = new Monster(0, 520, 0, 520, 200, 300, 200, 300, false);
-		var monster7 = new Monster(210, 520, 210, 520, 200, 300, 300, 300, false);
-		var monster8 = new Monster(420, 520, 420, 520, 200, 300, ranX, ranY, false);
+	    var monster1 = new Monster(0, 0, 0, 80, 240, 320, 240, 320, false);
+		var monster2 = new Monster(200, 0, 200, 0, 240, 240, 240, 240, false);
+		var monster3 = new Monster(420, 0, 420, 0, 200, 360, 360, 200, false);
+		var monster4 = new Monster(0, 320, 0, 320, 200, 320, 200, 320, false);
+		var monster5 = new Monster(420, 320, 420, 320, 200, 300, 300, 300, false);
+		var monster6 = new Monster(0, 420, 0, 520, 200, 300, 200, 300, false);
+		var monster7 = new Monster(200, 520, 200, 520, 200, 300, 300, 300, true);
+		var monster8 = new Monster(420, 420, 420, 420, 200, 300, ranX, ranY, false);
 		monster = [monster1, monster2, monster3, monster4, monster5, monster6, monster7, monster8];
 
-		var btnStop = new Button(350, 10, true);
 		var btnPause = new Button(450, 10, true);
 		var btnRestart = new Button(400, 10, true);
 		var btnBoom = new Button(10, 80, true);
 		_plus = new pointPlus (200, 300, 1, false);
-		arrButton = [btnStop, btnRestart, btnPause, btnBoom];
+		arrButton = [btnRestart, btnPause, btnBoom];
 	    randomMonster();
 	    
 	} else {
@@ -215,24 +224,24 @@ function start() {
 */
 function killMonster(mouseX, mouseY, _monster) {
 	// if position mouse in size of monster -> kill monster and random create new monster
-    if (mouseX > _monster.x && mouseX <= _monster.x + size && mouseY > _monster.y && mouseY <= _monster.y + size && _monster.visible)
-        {
+    if (mouseX > _monster.x && mouseX <= _monster.x + size && mouseY > _monster.y && mouseY <= _monster.y + size && _monster.visible) {
+        
         	keyPointPlus +=1;
         	killed(_monster);
         	if (point <= 150) {
-           		 randomMonster();
-           	}
-           	if (point > 150 && point < 250) {
-           		randomMonster();
            		randomMonster();
            		speed = 2;
            	}
-           	if (point > 300) {
-           		randomMonster();
-           		randomMonster();
-           		//speed = 5;
-           	}
+        if (point > 150 && point < 250) {
+           	randomMonster();
+           	speed = 4;
         }
+        if (point >= 250) {
+           	randomMonster();
+           	randomMonster();
+           	speed = 4;
+        }
+    }
 }
 /*Add envent listener for canvas*/
 canvas.addEventListener("click",function(e) {
@@ -242,19 +251,18 @@ canvas.addEventListener("click",function(e) {
 		for (var i = 0; i < 8; i++) {
 			killMonster(mouseX, mouseY, monster[i]);
 		}
-		clickBoom(mouseX, mouseY, arrButton[3]); // click boom
-		clickPause(mouseX, mouseY, arrButton[2]); // click pause\
+		clickBoom(mouseX, mouseY, arrButton[2]); // click boom
+		clickPause(mouseX, mouseY, arrButton[1]); // click pause\
 		if (_plus.visible) {
 			eatPointPlus(mouseX, mouseY, _plus);
 		}
 	}
-	clickPause(mouseX, mouseY, arrButton[2]);
+	clickPause(mouseX, mouseY, arrButton[1]);
 	if (_stop) {
 		newGame(mouseX, mouseY);
-		clickRestart(mouseX, mouseY, arrButton[1]) // click restart
+		clickRestart(mouseX, mouseY, arrButton[0]) // click restart
 	}
-	clickStop(mouseX, mouseY, arrButton[0]); // click stop
-	clickRestart(mouseX, mouseY, arrButton[1])
+	clickRestart(mouseX, mouseY, arrButton[0])
 });
 /*Create random monster*/
 function randomMonster() {
@@ -312,25 +320,14 @@ function clickPause (mouseX, mouseY, _button) {
 	}
 }
 function clickRestart (mouseX, mouseY, _button) {
+
 	if (mouseX > 400 && mouseX <=  400 + 30 && mouseY > 10 && mouseY <= 10 + 30) {
-		speed = 1;
 		timeRun = 20;
 		point = 100;
 		_boom = 3;
-		heart = 4;
+		heart = 3;
 		loadGame();
 		keyPointPlus = 0;
-	}
-}
-function clickStop (mouseX, mouseY, _button) {
-	_stop = true;
-	if (mouseX > 350 && mouseX <=  350 + 30 && mouseY > 10 && mouseY <= 10 + 30) {
-
-		for (var i = monster.length - 1; i >= 0; i--) {
-			monster[i].visible = false;
-		}
-		heart = 0;
-		update();
 	}
 }
 /*Stop game*/
@@ -349,6 +346,7 @@ function Stop() {
    		context.fillText("Hight Score: " + hightScore, 150, 100);
    		context.fillText("Score: " + point, 150, 150);
    	}
+   	speed = 2;
 }
 /*Set new game*/
 function newGame(mouseX, mouseY) {
@@ -357,7 +355,7 @@ function newGame(mouseX, mouseY) {
 		timeRun = 20;
 		point = 100;
 		_boom = 3;
-		heart = 4;
+		heart = 3;
 		loadGame();
 		_pause = false;
 		_runningGame = true;
