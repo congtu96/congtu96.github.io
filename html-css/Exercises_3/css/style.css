@@ -68,11 +68,9 @@ p{
 	content: url(../img/arr_1.gif);
 	padding-right: 8px;
 }
-
 /*ul table*/
 .table{
 	line-height: 23px;
-
 }
 .table-left{
 	float: left;
@@ -102,7 +100,8 @@ p{
 	opacity: 0.1;
 }
 .right .logo{
-	padding-top: 20px;
+	padding-top: 5px;
+	height: 105px;
 }
 .right .title1{
 	text-align: left;
@@ -123,9 +122,17 @@ p{
 	margin-top: -10px;
 }
 .right .info .moreinfo{
+	color: white;
 	text-align: left;
+	
+	text-decoration: none;
 	padding-top: 20px;
 	padding-left: 45px;
+}
+.right .info .moreinfo a{
+	color: white;
+	text-align: ;
+	text-decoration: none;
 }
 .clean{
 	clear: both;
@@ -133,8 +140,8 @@ p{
 .hr{
 	border: 1px dotted #C0C0C0;
 	opacity: 0.2;
+	margin-bottom: 20px;
 }
-
 ul{
 	list-style-type: none;
 }
