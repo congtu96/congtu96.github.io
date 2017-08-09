@@ -50,7 +50,6 @@ function checkInput(textIn) {
     }
     return 0;
 }
-
 /**
 * Clear calendar
 **/
@@ -121,7 +120,6 @@ function aDay(day) {
             }
     day.classList.add("active");
 }
-
 /**
 * Summation month
 **/
@@ -137,7 +135,6 @@ function addMonth() {
     clear_Calendar();
     set_Calendar();  
 }
-
 /**
 * Subtraction month
 **/
@@ -153,7 +150,6 @@ function minusMonth() {
     clear_Calendar();
     set_Calendar();
 }
-
 /**
 * Summation year
 **/
@@ -169,7 +165,6 @@ function addYear() {
     clear_Calendar();
     set_Calendar(); 
 }
-
 /**
 * Subtraction year
 **/
@@ -185,7 +180,6 @@ function minusYear() {
     clear_Calendar();
     set_Calendar(); 
 }
-
 /**
 * Select month in option box
 **/
@@ -199,9 +193,7 @@ function choseMonth() {
     CURR_MONTH = document.getElementById("idOption_Month").value;
     clear_Calendar();
     set_Calendar();
-
 }
-
 /**
 * Select year in option box
 **/
@@ -216,7 +208,6 @@ function choseYear() {
     clear_Calendar();
     set_Calendar();
 }
-
 /**
 * Clear table calendar
 **/
