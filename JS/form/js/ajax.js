@@ -38,13 +38,11 @@ function btnSubmit() {
 		alert("Pleases, check again!");
 	}
 }
-
 /**
 * Check input username
 * @para name
 * name: get value from username box 
 */
-
 function checkUserName(name) {
 	var error = document.getElementById("check-name");
 	if (name.value == "" || name.value.length <= 0) {
@@ -67,7 +65,6 @@ function checkUserName(name) {
 		return CHECK_USER_NAME = true;
 	}
 }
-
 /**
 * Check input password
 * @para name
@@ -174,7 +171,6 @@ function checkDate(name) {
 	}
 	return CHECK_USER_NAME = false;
 }
-
 /**
 * Reset all value in form
 */
@@ -188,7 +184,6 @@ function reset() {
 	document.getElementById("idPass").value = "";
 	document.getElementById("idEmail").value = "";
 	document.getElementById("out-date").value = "";
-
 	document.getElementById("check-name").innerHTML ="";
 	document.getElementById("check-date").innerHTML	= "";
 	document.getElementById("check-email").innerHTML = "";
