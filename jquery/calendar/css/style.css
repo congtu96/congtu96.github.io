@@ -1,7 +1,7 @@
 #calendar{
 	width: 360px;
 	height: auto;
-	border: 2px solid red;
+	border: 1.5px solid red;
 	background-color: #d3bebe;
 }
 .button_Control {

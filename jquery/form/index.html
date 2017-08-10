@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<title>Form Ajax</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/ajax.js"></script>
+</head>
+<body>
+<div class="table">
+<!-- Form -->
+	<form class="form">
+	<!-- User name -->
+		<div class="user-name">
+			<label class="lbl">Username:</label>
+			<input class="in_put" id="idName" type="text" name="Username" placeholder="username"><br>
+		</div>
+		<p id="check-name"></p>
+	<!-- Password -->
+		<div class="pass">
+			<label class="lbl">Passwork:</label>
+			<input class="in_put" id="idPass" type="password" name="Password" placeholder="password"><br>
+		</div>
+		<p id="check-pass"></p>
+	<!-- Email -->	
+		<div class="email">
+			<label class="lbl">Email:</label>
+			<input class="in_put" id="idEmail" type="text" name="Email" placeholder="username@email.com">
+		</div>
+		<p id="check-email"></p>
+		<div class="input-birthday">
+			<label class="lbl">Birthday:</label>
+	<!-- Birthday -->
+			<input class="in_put" type="text" name="Birthday" id="out-date" placeholder= "dd/mm/yyyy" onkeyup="checkDate(this)" onchange="checkDate(this)">
+			<div id="input"></div>
+		</div>
+		<p id="check-date"></p>
+	</form>
+	<div class="clean"></div>
+<!-- Botton submit and refresh -->
+	<div class="button-click">
+		<button class="submit">SUBMIT</button>
+		<button class="reset">REFRESH</button>
+	</div>
+</div>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
