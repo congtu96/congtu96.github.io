@@ -1,0 +1,13 @@
+body {
+	width: auto;
+	height: auto;
+	background-color: black;
+	text-align: center;
+}
+canvas{
+    border: 1px solid white;
+    cursor: pointer;
+}
+p{
+	color: white;	
+}

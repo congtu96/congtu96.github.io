@@ -27,9 +27,7 @@ $(document).ready(function() {
 	});
 });
 /**
-* Check input username
-* @para name
-* name: get value from username box 
+* Event keyup, click, change for text box
 */
 $(document).ready(function() {
 	$("#idName").keyup(checkUserName);
@@ -38,7 +36,11 @@ $(document).ready(function() {
 	$("#out-date").keyup(checkDate);
 	$("#out-date").click(checkDate);
 	$("#out-date").change(checkDate);
+	$(".reset").click(reset);
 });
+/**
+* Check input username
+*/
 function checkUserName() {
 	var name = $("#idName");
 	var error = $("#check-name");
@@ -64,8 +66,6 @@ function checkUserName() {
 }
 /**
 * Check input password
-* @para name
-* name: get value from password box 
 */
 function checkPass() {
 	var name = $("#idPass");
@@ -106,8 +106,6 @@ function regexMail(inputReg) {
 }
 /**
 * Check input Email
-* @para name
-* name: get value from email box 
 */
 function checkEmail() {
 	var name = $("#idEmail");
@@ -142,8 +140,6 @@ function regexDate(inputDate) {
 }
 /**
 * Check input Date 
-* @para name
-* name: string date, get data from birthday box
 */
 function checkDate() {
 	var name = $("#out-date");
@@ -169,3 +165,18 @@ function checkDate() {
 /**
 * Reset all value in form
 */
+function reset() {
+	CHECK_USER_NAME = false;
+	CHECK_PASSWORD = false;
+	CHECK_EMAIL = false;
+	CHECK_BIRTH_DAY = false;
+	CHECK_DATE = false;
+	$("#idName").val("");
+	$("#idPass").val("");
+	$("#idEmail").val("");
+	$("#out-date").val("");
+	$("#check-name").html("");
+	$("#check-date").html("");
+	$("#check-email").html("");
+	$("#check-pass").html("");
+}
