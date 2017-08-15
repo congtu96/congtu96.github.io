@@ -1,0 +1,333 @@
+@media screen and (max-width: 644px) {
+div.header
+{
+	float:none;
+}	
+div.inner
+{
+	height: auto;
+	margin: 0 auto;
+	padding: 0 1%;
+	text-align: center;
+	width: 98%;
+	min-width:50%;
+}
+.phone_pc
+{
+	display:none !important;
+}	
+.phone_sp
+{
+	display:inline-block !important;
+}	
+h1
+{
+	text-align:center;
+}
+div.float,
+img.float,
+a.float,
+.float
+{
+	float:none;
+	text-align:center;
+	margin:7px auto;
+	display:inline-block;
+}
+img.header_logo
+{
+	height:auto;
+}		
+		
+div.banner
+{
+	display:none;
+}
+div.content_1
+{
+	text-align:left;
+	max-width:100%;
+}	
+div.content_1 p strong
+{
+    display: inline-block;
+    float: left;
+    margin-left:4%;
+    margin-top: -18px;
+	width:96%;
+}
+div.box_1
+{
+	margin:5px;
+	padding-bottom:5px;
+}		
+div.aside
+{
+	float:none;
+	margin:25px auto;
+}
+div.aside_box
+{
+	margin:6px auto;
+}	
+	
+div.footer_left
+{
+	margin-top:20px;
+}	
+div.footer
+{
+	background:url(../images/footer_bg.jpg) repeat left top;
+}	
+	
+div.menu_footer_2 ul li.menu_1 a
+{
+	background:url(../images/footer_bullet_2.png) no-repeat scroll left center;
+}	
+div.menu_footer_2 ul li
+{
+	margin:2px 0 2px 8px
+}	
+div.menu_footer_1
+{
+    padding: 20px 0 16px 20px;
+}		
+div.menu_footer_2
+{
+	display:block;
+}
+dl.index dt
+{
+	float:none;
+	margin-bottom:5px;
+	background:url(../images/bullet_1.jpg) no-repeat scroll left 4px ;
+}
+dl.index dd
+{
+    display:block;
+    padding-left: 23px;
+	width:auto;
+}
+div.f_l,
+div.menu_footer
+{
+	float:none;
+}	
+div.f_l
+{
+	margin-top:30px;
+}
+div.menu_footer_1
+{
+	max-width:288px;
+}	
+div.menu_footer_1 ul
+{
+	max-width:144px;
+}
+div.copyright
+{
+    line-height: 13px;
+    padding: 10px 0 70px;
+}
+/*page*/	
+h2,
+h3,	
+h4
+{
+	width:auto;
+	text-align:left;
+	display:block;
+}	
+h4
+{
+ padding-left:22px;
+}	
+
+img.bigimg_activision
+{
+	height:auto;
+}
+ul.ul_img_access li
+{
+	float:none;
+}
+img.bigimg_access
+{
+	height:auto;
+}
+p.textmap_access
+{
+	text-align:left;
+}
+p.text_access
+{
+	text-align:left;
+	max-width:100%;
+}
+ul.ul_img_access
+{
+	float:none;
+}
+div.box_access
+{
+	margin:0 auto;
+}
+img.img_access
+{
+	height:auto;
+}
+img.img_facial
+{
+	margin: 0 auto;
+	text-align:center;
+	height:auto;
+	float:none;	
+	max-width:100%;
+	width:auto;
+}
+div.text_mid_facial
+{
+	text-align:left;
+	height:auto;
+	float:none;
+	max-width:100%;
+	padding-left:0px;
+}
+img.button_2_facial
+{
+	float:none;
+	max-width: 250px;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	margin: 0 auto;
+}
+/*reruit*/
+div.photo_collection_reruit
+{
+	max-width:100%;
+	text-align:left; 
+}
+p.text_top_reruit
+{
+	max-width:100%;
+	text-align:left; 
+}
+img.img_right_reruit
+{
+	height:auto;
+	float:none;
+	margin:0 auto;
+	text-align:center;
+}
+p.text_mid_left_reruit
+{
+	max-width:100%;
+	float:none;
+	text-align:left; 
+}
+img.img_left_reruit
+{
+	max-width:240px;
+	width:100%;
+	height:160px;
+	float:none;
+}
+p.text_mid_right_reruit
+{
+	max-width:100%;
+	float:none;
+	text-align:left; 
+}
+p.p_text_bot
+{
+	text-align:left;
+	margin-bottom:15px;
+	max-width:100%;
+}
+/*Begin fresher Cong Tu*/
+.no_margin_top_tuvc
+{
+	margin-top: 0;
+}
+.img_button_2_tuvc 
+{
+	padding-right: 5px;
+}
+.title3
+{
+	width: 100px;
+}
+div.box1
+{
+	width: 218px;
+	height: auto;
+	display: inline-block;
+	text-align: center;
+	border: 1px solid #d9d9d9;
+	vertical-align: top;
+}
+div.box1 p
+{
+	margin: 5px 10px 5px 10px;
+	height: 115px;
+	display: inline-block;
+}
+div.box1 a
+{
+/*	margin: 2px 0 0 10px;*/
+	display: inline-block;
+}
+.article_index .img_tuvc
+{
+	text-align: center;
+	float: none !important;
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+div.box2
+{
+	margin: 0 16px;
+}
+.box_2_tuvc
+{
+	margin-left: 13px;
+	margin-right: 13px;
+}
+.info_tuvc
+{
+	margin-top: 30px;
+}
+.info_content_tuvc
+{
+	padding-left: 5px;
+	text-align: left;
+	margin-bottom: 12px;
+	padding-bottom: 10px;
+	list-style-type: none;
+}
+li p:before
+{
+	content: url(../images/bullet_1.jpg);
+	padding-right: 8px;
+}
+.img_button_2_tuvc
+{
+	margin-top: 10px;
+}
+.clean
+{
+	clear: both;
+}
+.float-right
+{
+	float: none;
+	margin: auto;
+}
+.float-right img
+{
+	
+}
+/*End*/
+}
