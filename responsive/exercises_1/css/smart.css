@@ -133,7 +133,7 @@ div.menu_footer_1 ul
 div.copyright
 {
     line-height: 13px;
-    padding: 10px 0 70px;
+    padding: 10px 0 0px;
 }
 /*page*/	
 h2,
@@ -329,10 +329,6 @@ li p:before
 {
 	float: none;
 	margin: auto;
-}
-.float-right img
-{
-	
 }
 /*End*/
 }

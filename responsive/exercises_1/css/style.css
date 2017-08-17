@@ -370,7 +370,8 @@ div.footer
 	float:left;
 	z-index:99;
 	position:relative;
-	padding-bottom:30px;
+	padding-bottom:20px;
+	margin-bottom: -6px;
 }
 
 div.f_l
@@ -498,6 +499,7 @@ div.copyright
 	color:#ffffff;
 	float:left;
 	font-size:11px;
+	margin-top: 0px;
 }
 /*page*/		
 h2
@@ -537,27 +539,22 @@ h2
 	background: #ffb452;
 	text-decoration: none;
 }	
-
 /*Begin fresher Cong Tu*/
 .no_margin_top_tuvc
-
 {
 	margin-top: 0;
 }
 .img_button_2_tuvc 
-
 {
 	padding-right: 5px;
 	float: right;
 }
 .title3
-
 {
 	width: 100px;
 	float: left;
 }
 div.box1
-
 {
 	width: 218px;
 	height: auto;
@@ -734,5 +731,8 @@ dl.info_content_tuvc dd
 {
 	width: 200px;
 	margin-top: 10px;
+}
+.menu_footer_2 ul a {
+	height: 20px;
 }
 /*End fresher Cong Tu*/
