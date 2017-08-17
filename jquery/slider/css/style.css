@@ -13,6 +13,7 @@ body{
 	height: 700px;
 	margin: 0 auto;
 }
+/*slider*/
 .slider{
 	width: 900px;
 	height: 500px;
@@ -48,6 +49,7 @@ body{
     top: 230px;
     right: 5px;
 }
+/*index image*/
 .status {
 	margin-top: auto;
 	padding-top: 35px;
