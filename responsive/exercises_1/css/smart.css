@@ -3,7 +3,7 @@
     display: none;
   }
 }
-@media screen and (max-width: 644px) {
+@media screen and (max-width: 640px) {
 div.header
 {
 	float:none;
@@ -272,6 +272,7 @@ div.box1
 	text-align: center;
 	border: 1px solid #d9d9d9;
 	vertical-align: top;
+	margin-bottom: 15px;
 }
 div.box1 p
 {
@@ -283,6 +284,9 @@ div.box1 a
 {
 /*	margin: 2px 0 0 10px;*/
 	display: inline-block;
+}
+.box_1_tuvc
+{
 }
 .article_index .img_tuvc
 {
@@ -311,6 +315,7 @@ div.box2
 	margin-bottom: 12px;
 	padding-bottom: 10px;
 	list-style-type: none;
+	display: block;
 }
 li p:before
 {

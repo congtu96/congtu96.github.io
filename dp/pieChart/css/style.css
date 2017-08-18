@@ -1,0 +1,24 @@
+body
+{
+	width: auto;
+	height: auto;
+	text-align: center;
+}
+div
+{
+	margin-top: auto;
+}
+p
+{
+	font-size: 40px;
+	font-weight: bold;
+}
+#myCanvas
+{
+	margin: 0px;
+
+}
+#info
+{
+	margin-left: 100px;
+}
