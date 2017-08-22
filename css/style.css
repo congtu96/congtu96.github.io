@@ -23,17 +23,27 @@ a {
 	color: green ;
 }
 a:hover {
-	color: red;
+	color: red !important;
 }
 a:visited {
 color: blue;
 }
 a:active {
-	color: #9933FF!important;
+	color: yellow;
 }
-.lesson{
+.lesson {
 	padding-left: 20px;
 }
-.title{
+.title {
 	font-weight: bold;
+}
+.left {
+	float: left;
+}
+.right {
+	margin-left: 350px;
+	padding-top: 60px;
+}
+.clean {
+	clear: both;
 }
