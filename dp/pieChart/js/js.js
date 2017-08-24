@@ -54,8 +54,8 @@ var _pie2D = (function() {
         for (var i in data) {
             var slice = 2 * Math.PI * (data[i] / total);
             //Calculate the position of the text
-            var pX = x + r/1.3 * Math.cos(tmp + slice/2);
-            var pY = y + r/1.4 * Math.sin(tmp + slice/2);
+            var pX = x + r / 1.3 * Math.cos(tmp + slice / 2);
+            var pY = y + r / 1.4 * Math.sin(tmp + slice / 2);
             ctx.font = "20px Georgia";
             ctx.fillStyle = "black";
             var info = data[i] * 100 / total;

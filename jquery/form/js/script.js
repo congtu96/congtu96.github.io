@@ -109,10 +109,10 @@ function set_Calendar(){
 **/
 function aDay(day) {
     for (var i = flag; i < lengthArr; i++) {
-        if(colum[i].classList.contains("active")) {
+        if (colum[i].classList.contains("active")) {
             colum[i].classList.remove("active");
         }
-        if(colum[i].classList.contains("default")) {
+        if (colum[i].classList.contains("default")) {
             colum[i].classList.remove("default");
         }
     }
@@ -259,7 +259,7 @@ function create_Empty_Calendar() {
     /*create option month*/
     var select_Month = $("<select>", {id: "idOption_Month"});
       for (var i = 0; i < ARR_MONTH.length; i++) {
-        var option_Month = $("<option>", {value: i+1, text: ARR_MONTH[i]});
+        var option_Month = $("<option>", {value: i + 1, text: ARR_MONTH[i]});
         select_Month.append(option_Month);
     }
     /*create button right of month*/

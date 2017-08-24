@@ -17,16 +17,16 @@ $(".pre").click(function() {
 $(".next").click(function() {
 	nextARR_IMG();
 });
-$(".point").click(function () {
+$(".point").click(function() {
 	ARR_IMG_CURRENT = ARR_IMG_mini.index(this);
 	console.log(ARR_IMG_CURRENT);
 	showARR_IMG();
 });
-$(".point").mouseenter(function () {
+$(".point").mouseenter(function() {
 	CHECK_MOUSE = false;
 	blurARR_IMG(ARR_IMG_mini.index(this));
 });
-$(".point").mouseleave(function () {
+$(".point").mouseleave(function() {
 	CHECK_MOUSE = true;
 	blurARR_IMG(ARR_IMG_CURRENT);
 });
