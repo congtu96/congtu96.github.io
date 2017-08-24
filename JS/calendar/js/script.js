@@ -18,8 +18,9 @@ var lengthArr; // = num date of month + flag
 var checkTable = true; // check create table
 var input = document.getElementById("out-date");
 input.addEventListener("click", function() {
-    if (checkTable)
+    if (checkTable) {
         create_Empty_Calendar();
+    }
 	if (input.value == "") {
 		CURR_MONTH = TODAY.getMonth() + 1;
 		CURR_YEARS = TODAY.getFullYear();
@@ -29,7 +30,7 @@ input.addEventListener("click", function() {
         CURR_MONTH = parseInt(input.value.split("/")[1]);
         CURR_YEARS = parseInt(input.value.split("/")[2]);
         if (document.getElementsByClassName("today").length != 0) {
-        document.getElementsByClassName("today")[0].classList.remove("today");
+            document.getElementsByClassName("today")[0].classList.remove("today");
         }
         if (document.getElementsByClassName("active").length != 0) {
             document.getElementsByClassName("active")[0].classList.remove("active");
@@ -45,7 +46,9 @@ function checkInput(textIn) {
     // regex DD/MM/YYYY
     var reg = "(([1-9]{1}|0[1-9]{1}|[1-2]{1}[0-9]{1}|3[0-1]{1})[-|/]([1-9]{1}|0[1-9]|1[0-2])[-|/]([0-9]{4}))";
     var regexDate = new RegExp(reg).test(textIn)
-    if (regexDate) { return 1; }
+    if (regexDate) {
+        return 1;
+    }
 
     return 0;
 }
@@ -61,7 +64,7 @@ function clear_Calendar() {
 /**
 * Set calendar
 **/
-function set_Calendar(){
+function set_Calendar() {
     var firstDay = new Date(CURR_YEARS, CURR_MONTH - 1, 1);
     var lastOfMonth = new Date(CURR_YEARS, CURR_MONTH, 0); //lastOfMonth.getDate(); ==> 31 days of month 7th
     document.getElementById("idOption_Year").value = CURR_YEARS; //set present years 
@@ -76,8 +79,7 @@ function set_Calendar(){
         colum[i].innerHTML = CURR_DAY[i];
     }
     for (var i = colum.length - 1; i >= 7; i--) {
-        if (i-7 == first)
-      	{
+        if (i - 7 == first) {
            	colum[i].innerHTML = "first";
             flag = i;
         }   
@@ -86,17 +88,21 @@ function set_Calendar(){
     // fill day of month
     var index = 1;
     lengthArr = numsDayOfMonth + flag;
-    for (var i = flag; i < lengthArr; i++){
+    for (var i = flag; i < lengthArr; i++) {
         colum[i].innerHTML = index;
         // add event click for a day to get date
         colum[i].addEventListener("click", function() {
            aDay(this);
         });
         var tmp = new Date();// use to get month and year at present
-        if (CURR_MONTH == tmp.getMonth() + 1 && CURR_YEARS == tmp.getFullYear())
-            if (index == TODAY.getDate())
+        if (CURR_MONTH == tmp.getMonth() + 1 && CURR_YEARS == tmp.getFullYear()) {
+            if (index == TODAY.getDate()) {
+
                 colum[i].classList.add("today");
-            else colum[i].classList.add("default");
+            } else {
+                    colum[i].classList.add("default");
+            }
+        }
         index++;
     }
 }
@@ -105,10 +111,12 @@ function set_Calendar(){
 **/
 function aDay(day) {
     for (var i = flag; i < lengthArr; i++) {
-        if(colum[i].classList.contains("active"))
+        if (colum[i].classList.contains("active")) {
             colum[i].classList.remove("active");
-        if(colum[i].classList.contains("default"))
+        }
+        if (colum[i].classList.contains("default")) {
             colum[i].classList.remove("default");
+        }
     }
     if (day.innerHTML == "" || day.innerHTML == null) {
         day.classList.add("default");
@@ -128,8 +136,9 @@ function addMonth() {
     if (document.getElementsByClassName("active").length != 0) {
         document.getElementsByClassName("active")[0].classList.remove("active");
     }
-    if (CURR_MONTH < 12)
+    if (CURR_MONTH < 12) {
         CURR_MONTH ++;
+    }
     clear_Calendar();
     set_Calendar();  
 }
@@ -143,8 +152,9 @@ function minusMonth() {
     if (document.getElementsByClassName("active").length != 0) {
         document.getElementsByClassName("active")[0].classList.remove("active");
     }
-    if (CURR_MONTH > 1)
+    if (CURR_MONTH > 1) {
         CURR_MONTH --;
+    }
     clear_Calendar();
     set_Calendar();
 }
@@ -158,8 +168,9 @@ function addYear() {
     if (document.getElementsByClassName("active").length != 0) {
         document.getElementsByClassName("active")[0].classList.remove("active");
     }
-    if (CURR_YEARS < TODAY.getFullYear() + 400)
+    if (CURR_YEARS < TODAY.getFullYear() + 400) {
         CURR_YEARS ++;
+    }
     clear_Calendar();
     set_Calendar(); 
 }
@@ -173,8 +184,9 @@ function minusYear() {
     if (document.getElementsByClassName("active").length != 0) {
         document.getElementsByClassName("active")[0].classList.remove("active");
     }
-    if (CURR_YEARS > 1900)
+    if (CURR_YEARS > 1900) {
         CURR_YEARS --;
+    }
     clear_Calendar();
     set_Calendar(); 
 }

@@ -1,4 +1,4 @@
-var _slider = (function() {
+var slider = (function() {
 	var ARR_IMG = $(".images");//Array image on slide
 	var ARR_IMG_mini = $(".point");//Array image on status bar
 	var ARR_IMG_CURRENT = 0;//Variable index img on slider
@@ -23,7 +23,7 @@ var _slider = (function() {
 	* Previus image
 	*/
 	function preARR_IMG() {
-		ARR_IMG_CURRENT --;
+		ARR_IMG_CURRENT--;
 
 		if (ARR_IMG_CURRENT < 0) {
 			ARR_IMG_CURRENT = ARR_IMG.length - 1;
@@ -97,14 +97,14 @@ var _slider = (function() {
 * Event click
 */
 $(document).ready(function() {
-	_slider.autoSlide();
+	slider.autoSlide();
 	$(".pre").click(function() {
-		_slider.previous();
+		slider.previous();
 	});
 	$(".next").click(function() {
-		_slider.next();
+		slider.next();
 	});
 	$(".point").click(function () {
-		_slider.chose(this);
+		slider.chose(this);
 	});
 });

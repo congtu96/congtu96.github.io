@@ -62,14 +62,14 @@ function checkInput(textIn) {
 **/
 function clear_Calendar() {
     var colum = $("td");
-    for (var i = colum.length - 1; i >= 7; i --) {
+    for (var i = colum.length - 1; i >= 7; i--) {
         colum[i].innerHTML = "";
     }
 }
 /**
 * Set calendar
 **/
-function set_Calendar(){
+function set_Calendar() {
     var firstDay = new Date(CURR_YEARS, CURR_MONTH - 1, 1);
     var lastOfMonth = new Date(CURR_YEARS, CURR_MONTH, 0); //lastOfMonth.getDate(); ==> 31 days of month 7th
     console.log(CURR_YEARS);
@@ -84,33 +84,32 @@ function set_Calendar(){
     colum.click(function() {
         aDay(this);
     });
-    for (var i = 0; i > 7; i ++) {
+    for (var i = 0; i > 7; i++) {
         colum[i].text(CURR_DAY[i]); 
     }
-    for (var i = colum.length - 1; i >= 7; i --) {
+    for (var i = colum.length - 1; i >= 7; i--) {
 
-        if (i - 7 == first)
-        {
+        if (i - 7 == first) {
             flag = i;
-        }   
+        }
     }
     // all arr tag <td>, [0-7] = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']: day of week 
     // fill day of month
     var index = 1;
     lengthArr = numsDayOfMonth + flag;
-    for (var i = flag; i < lengthArr; i ++){
+    for (var i = flag; i < lengthArr; i ++) {
         colum[i].innerHTML = index;
         // add event click for a day to get date
         var tmp = new Date();// use to get month and year at present
 
-        if (CURR_MONTH == tmp.getMonth() + 1 && CURR_YEARS == tmp.getFullYear())
+        if (CURR_MONTH == tmp.getMonth() + 1 && CURR_YEARS == tmp.getFullYear()) {
 
             if (index == TODAY.getDate()) {
                 colum[i].classList.add("today");
+            } else {
+                    colum[i].classList.add("default");
             }
-            else {
-                colum[i].classList.add("default");
-            }
+        }
         index ++;
     }
 }
@@ -120,11 +119,11 @@ function set_Calendar(){
 function aDay(day) {
     for (var i = flag; i < lengthArr; i ++) {
 
-        if(colum[i].classList.contains("active")) {
+        if (colum[i].classList.contains("active")) {
             colum[i].classList.remove("active");
         }
 
-        if(colum[i].classList.contains("default")) {
+        if (colum[i].classList.contains("default")) {
             colum[i].classList.remove("default");
         }
     }
@@ -221,7 +220,7 @@ function minusYear() {
         CURR_YEARS --;
     }
     clear_Calendar();
-    set_Calendar(); 
+    set_Calendar();
 }
 /**
 * Select month in option box
@@ -290,7 +289,7 @@ function create_Empty_Calendar() {
     /*create option month*/
     var select_Month = $("<select>", {id: "idOption_Month"});
       for (var i = 0; i < ARR_MONTH.length; i++) {
-        var option_Month = $("<option>", {value: i+1, text: ARR_MONTH[i]});
+        var option_Month = $("<option>", {value: i + 1, text: ARR_MONTH[i]});
         select_Month.append(option_Month);
     }
     /*create button right of month*/

@@ -11,26 +11,28 @@ var BAR_STATUS = document.getElementsByClassName("status")[0].getElementsByClass
 * @para indexOld
 * indexOld (nums) current image to next image
 */
-function setImage(indexOld){
-     for(i = 0; i < LIST_IMG.length; i++){
-         if(i != indexOld)
+function setImage(indexOld) {
+     for (i = 0; i < LIST_IMG.length; i++) {
+         if (i != indexOld)
             LIST_IMG[i].style.opacity = 0;
     }
     var opacity = 0;
     var opacityImageOld = 1;
-    var setOpacity =  setInterval(function (){
+    var setOpacity =  setInterval(function () {
             LIST_IMG[INDEX_CURRENT].style.opacity = opacity;
             LIST_IMG[indexOld].style.opacity = opacityImageOld;
-            if(opacity >= 1 && opacityImageOld <= 0){
+            if (opacity >= 1 && opacityImageOld <= 0) {
                 CALL = true;
                 clearInterval(setOpacity);
                 return;
             }
             opacity += 0.02;
-            if(opacityImageOld > 0)
+            if (opacityImageOld > 0) {
                 opacityImageOld -= 0.02;
-            if(opacityImageOld < 0)
+            }
+            if (opacityImageOld < 0) {
                 opacityImageOld = 0;
+            }
     }, DURATION / 200); 
 }
 /*onmouseover
@@ -41,37 +43,41 @@ function mouseIn(n) {
     LOOP = false;
     CALL = false;
     for (i = 0; i < BAR_STATUS.length; i++)
-        if (i == n)
+        if (i == n) {
             BAR_STATUS[i].style.opacity = 1;
-        else BAR_STATUS[i].style.opacity = 0.3;
+        } else {
+            BAR_STATUS[i].style.opacity = 0.3;
+        }
 }
 /*onmouseout*/
-function mouseOut(){
+function mouseOut() {
     LOOP = true;
     CALL = true;
-    for (i=0; i<BAR_STATUS.length;i++)
-        BAR_STATUS[i].style.opacity=0.3;
+    for (i = 0; i < BAR_STATUS.length; i++) {
+        BAR_STATUS[i].style.opacity = 0.3;
+    }
 }
 /*select picture under slide
 * @para n
 * n is nums image under slider
 */
-function selectImg(n){
+function selectImg(n) {
     LOOP = false;
     CALL = false;
     INDEX_CURRENT = n;
-    for(i = 0; i < LIST_IMG.length; i++){
-         if(i != n)
+    for (i = 0; i < LIST_IMG.length; i++) {
+         if (i != n) {
             LIST_IMG[i].style.opacity = 0;
+        }
     }
      LIST_IMG[n].style.opacity = 1;
 }
 /*get next image*/
-function getNextImage(){
-    if(CALL == false){
+function getNextImage() {
+    if (CALL == false) {
         return;
     }
-    if(INDEX_CURRENT == LIST_IMG.length - 1){
+    if (INDEX_CURRENT == LIST_IMG.length - 1) {
         INDEX_CURRENT = 0;
         setImage( LIST_IMG.length - 1);
     }
@@ -82,11 +88,11 @@ function getNextImage(){
     CALL = false;
 }
 /*get previous image*/
-function getPrevImage(){
-    if(CALL == false){
+function getPrevImage() {
+    if (CALL == false) {
         return;
     }
-    if(INDEX_CURRENT == 0){
+    if (INDEX_CURRENT == 0){
         INDEX_CURRENT = LIST_IMG.length - 1;
         setImage( 0);
     }
@@ -97,9 +103,9 @@ function getPrevImage(){
     CALL = false;
 }
 /*auto slider with default time*/
-function initSlider(){
+function initSlider() {
     LIST_IMG[INDEX_CURRENT].style.opacity = 1;
-    if(LOOP){
+    if (LOOP) {
             setInterval(getNextImage, DURATION);
     }
 }
