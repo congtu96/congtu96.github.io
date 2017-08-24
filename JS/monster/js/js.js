@@ -119,7 +119,7 @@ Monster.prototype.move = function() {
 		randomMonster();
 	if (heart > 0) {
 			heart--;
-			point +=5;
+			point += 5;
 	}
 	else {
 			running = false;
@@ -127,12 +127,12 @@ Monster.prototype.move = function() {
 	}
 };
 /*Class button*/
-function Button (positionX, positionY, click) {
+function Button(positionX, positionY, click) {
 	this.positionX = positionX;
 	this.spositionY = positionY;
 	this.click = click;
 }
-function pointPlus (x, y, _pointPlus, visible) {
+function pointPlus(x, y, _pointPlus, visible) {
 	this.x = x;
 	this.y = y;
 	this._pointPlus = _pointPlus;
@@ -149,7 +149,7 @@ function update() {
 	    context.fillText("x " + heart, 30, 55);
 	    context.fillText("x " + _boom, 50, 135);
 	    if (_plus.visible) {
-	    		context.drawImage(imgSuprise, _plus.x, _plus.y, 60, 60);
+	    	context.drawImage(imgSuprise, _plus.x, _plus.y, 60, 60);
 	    }
 	    for (var i = 0; i < monster.length; i++) {
 	        if (monster[i].visible) {
@@ -177,8 +177,8 @@ function start() {
 	_stop = false;
 	_runningGame = true;
 	if (heart > 0) {
-	    var ranX = Math.floor(Math.random()*(400-2*20)) + 20;
-	    var ranY = Math.floor(Math.random()*(200-2*20)) + 20;
+	    var ranX = Math.floor(Math.random() * (400 - 2 * 20)) + 20;
+	    var ranY = Math.floor(Math.random() * (200 - 2 * 20)) + 20;
 	    var monster1 = new Monster(0, 0, 0, 80, 240, 320, 240, 320, false);
 		var monster2 = new Monster(200, 0, 200, 0, 240, 240, 240, 240, false);
 		var monster3 = new Monster(420, 0, 420, 0, 200, 360, 360, 200, false);
@@ -207,7 +207,7 @@ function start() {
 function killMonster(mouseX, mouseY, _monster) {
 	// if position mouse in size of monster -> kill monster and random create new monster
     if (mouseX > _monster.x && mouseX <= _monster.x + size && mouseY > _monster.y && mouseY <= _monster.y + size && _monster.visible) {
-        	keyPointPlus +=1;
+        	keyPointPlus += 1;
         	killed(_monster);
         	if (point <= 150) {
            		randomMonster();
@@ -253,7 +253,7 @@ function randomMonster() {
 /**Check monster had killed?
 * @monster: position monster (x, y)
 */
-function killed (monster) {
+function killed(monster) {
 	monster.x = monster.initX;
 	monster.y = monster.initY;
 	monster.fromX = monster.toX;
@@ -286,7 +286,7 @@ function clickBoom(mouseX, mouseY, _button) {
 * @mouseY: position mouse y
 * @_button: position button (x, y)
 */
-function clickPause (mouseX, mouseY, _button) {
+function clickPause(mouseX, mouseY, _button) {
 	//Pause game
 	_stop = false;
 	if (mouseX >  _button.positionX && mouseX <= _button.positionX + 30 && mouseY > 10 && mouseY <= 10 + 30) {
@@ -299,7 +299,7 @@ function clickPause (mouseX, mouseY, _button) {
 		_runningGame = true;
 	}
 }
-function clickRestart (mouseX, mouseY, _button) {
+function clickRestart(mouseX, mouseY, _button) {
 
 	if (mouseX > 400 && mouseX <= 400 + 40 && mouseY > 10 && mouseY <= 10 + 30) {
 		timeRun = 20;

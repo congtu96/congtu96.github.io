@@ -3,7 +3,7 @@
     display: none;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 644px) {
 div.header
 {
 	float:none;
@@ -101,18 +101,7 @@ div.menu_footer_2
 {
 	display:block;
 }
-dl.index dt
-{
-	float:none;
-	margin-bottom:5px;
-	background:url(../images/bullet_1.jpg) no-repeat scroll left 4px ;
-}
-dl.index dd
-{
-    display:block;
-    padding-left: 23px;
-	width:auto;
-}
+
 div.f_l,
 div.menu_footer
 {
@@ -272,7 +261,7 @@ div.box1
 	text-align: center;
 	border: 1px solid #d9d9d9;
 	vertical-align: top;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 }
 div.box1 p
 {
@@ -284,9 +273,6 @@ div.box1 a
 {
 /*	margin: 2px 0 0 10px;*/
 	display: inline-block;
-}
-.box_1_tuvc
-{
 }
 .article_index .img_tuvc
 {
@@ -308,14 +294,17 @@ div.box2
 {
 	margin-top: 30px;
 }
-.info_content_tuvc
-{
-	padding-left: 5px;
-	text-align: left;
-	margin-bottom: 12px;
-	padding-bottom: 10px;
-	list-style-type: none;
-	display: block;
+
+
+dl.index dt{
+	float:none;
+	margin-bottom:5px;
+	background:url(../images/bullet_1.jpg) no-repeat scroll left 4px ;
+	}
+dl.index dd {
+    display:block;
+    padding-left: 23px;
+	width:auto;
 }
 li p:before
 {

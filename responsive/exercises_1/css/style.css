@@ -564,25 +564,21 @@ div.box1
 	vertical-align: top;
 }
 div.box1 p
-
 {
 	margin: 5px 10px 5px 10px;
 	height: 115px;
 	display: inline-block;
 }
 div.box1 a
-
 {
 	margin: 2px 0 0 10px;
 	display: inline-block;
 }		
 div.box2
-
 {
 	margin: 0 16px;
 }
 .box_2_tuvc
-
 {
 	margin-left: 13px;
 	margin-right: 13px;
@@ -591,38 +587,27 @@ div.box2
 {
 	margin-top: 30px;
 }
-.info_content_tuvc
 
-{
-	padding-left: 5px;
-	text-align: left;
-	margin-bottom: 12px;
-	padding-bottom: 10px;
-	list-style-type: none;
-}
-dl.info_content_tuvc
-{
+dl.index{
+	display: inline-block;
     height: auto;
     text-align: left;
     width: 100%;
-}	
-dl.info_content_tuvc dt
-{
+}
+dl.index dt{
 	background: url(../images/bullet_1.jpg) no-repeat left 5px;
     float: left;
     margin-left: 7px;
     padding-left: 15px;
     text-align: left;
 }
-dl.info_content_tuvc dd
-{
+dl.index dd {
     margin-bottom: 15px;
     padding-bottom: 15px;
     padding-left: 128px;
 	background:url(../images/bg_index_dl.jpg) repeat-x left bottom;
 }
 .img_button_2_tuvc
-
 {
 	margin-top: 10px;
 }

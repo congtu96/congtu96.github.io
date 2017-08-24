@@ -24,7 +24,7 @@ var colum = {
 /**
 * Draw colum chart
 **/
-var columChart = (function () {
+var columChart = (function() {
     // Private
     var canvas = document.getElementById("myChart");
     var ctx = canvas.getContext("2d");
@@ -40,15 +40,15 @@ var columChart = (function () {
         ctx.fillStyle = colum.colorColum;
         ctx.fillRect(pX * (colum.height.length + 1.4), colum.width * 1.55, colum.width, colum.width / 2);
         ctx.fillStyle = colum.colorText;
-        ctx.font='16px Arial';
+        ctx.font = '16px Arial';
         for (var i in info.right) {
             ctx.fillText(info.right[i], pX * (colum.height.length + 1.4), _heightText);
             _heightText += colum.distant - 5;
         }
-        ctx.font='Italic 18px Arial';
+        ctx.font = 'Italic 18px Arial';
         ctx.fillText(info.bottom, 220, 330);
-        ctx.rotate(- 90 * Math.PI / 180);
-        ctx.fillText(info.left, -250, 20);
+        ctx.rotate( - 90 * Math.PI / 180);
+        ctx.fillText(info.left, - 250, 20);
     }
     
     /**
@@ -58,7 +58,7 @@ var columChart = (function () {
         ctx.font = "24px Arial";
         ctx.fillStyle = colum.colorText;
         ctx.fillText(info.top, 50, 30);
-        var _distantHeight = 45;
+        var distantHeight = 45;
         var chartX = 63;
         var chartY = 80;
         var size = colum.width;
@@ -74,9 +74,9 @@ var columChart = (function () {
         for (var i = colum.height.length - 1; i >= 0; i--) {
             ctx.moveTo(chartX + 22, (chartY - 8) + tmp);
             ctx.lineTo(chartX + 22 + (size + distant) * colum.height.length, (chartY - 8) + tmp);
-            tmp += _distantHeight;
+            tmp += distantHeight;
             ctx.font = "14px arial";
-            ctx.fillText(colum.height[i], chartX, chartY + tmp - _distantHeight - 5);
+            ctx.fillText(colum.height[i], chartX, chartY + tmp - distantHeight - 5);
         }
         ctx.stroke();
         ctx.fillStyle = colum.colorColum;
