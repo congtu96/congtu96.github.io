@@ -16,5 +16,8 @@ p
 #myCanvas
 {
 	margin: 0px;
-    background-color: darkgray;
+}
+#name
+{
+	color: #00BCD4;
 }

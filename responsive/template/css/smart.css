@@ -1,0 +1,712 @@
+@media screen and (max-width: 644px) {
+div.header{
+	float:none;
+	}	
+div.inner {
+	height: auto;
+	margin: 0 auto;
+	padding: 0 1%;
+	text-align: center;
+	width: 98%;
+	min-width:50%;
+	}
+.phone_pc{
+	display:none !important;
+	}	
+.phone_sp{
+	display:inline-block !important;
+	}	
+h1{
+	text-align:center;
+	}
+div.float,
+img.float,
+a.float,
+.float{
+	float:none;
+	text-align:center;
+	margin:7px auto;
+	display:inline-block;
+	}
+img.header_logo{
+	height:auto;
+	}		
+		
+div.banner{
+	display:none;
+	}
+div.content_1{
+	text-align:left;
+	max-width:100%;
+	}	
+div.content_1 p strong {
+    display: inline-block;
+    float: left;
+    margin-left:4%;
+    margin-top: -18px;
+	width:96%;
+}
+div.box_1{
+	margin:5px;
+	padding-bottom:5px;
+	}		
+div.aside{
+	float:none;
+	margin:25px auto;
+	}
+div.aside_box{
+	margin:6px auto;
+	}	
+	
+div.footer_left{
+	margin-top:20px;
+	}	
+div.footer{
+	background:url(../images/footer_bg.jpg) repeat left top;
+	}	
+	
+div.menu_footer_2 ul li.menu_1 a{
+	background:url(../images/footer_bullet_2.png) no-repeat scroll left center;
+	}	
+div.menu_footer_2 ul li{
+	margin:2px 0 2px 8px
+	}	
+div.menu_footer_1 {
+    padding: 20px 0 16px 20px;
+}		
+div.menu_footer_2{
+	display:block;
+	}
+dl.index dt{
+	float:none;
+	margin-bottom:5px;
+	background:url(../images/bullet_1.jpg) no-repeat scroll left 4px ;
+	}
+dl.index dd {
+    display:block;
+    padding-left: 23px;
+	width:auto;
+}
+div.f_l,
+div.menu_footer{
+	float:none;
+	}	
+div.f_l{
+	margin-top:30px;
+	}
+div.menu_footer_1{
+	max-width:288px;
+	}	
+div.menu_footer_1 ul{
+	max-width:144px;
+	}
+div.copyright {
+    line-height: 13px;
+    padding: 10px 0 70px;
+}
+/*page*/	
+h2,
+h3,	
+h4{
+	width:auto;
+	text-align:left;
+	display:block;
+	}	
+h4{
+	padding-left:22px;
+	
+	}	
+/*chi Thao*/
+h4.margin_top_thao{
+	margin-top:20px;
+	}
+.div_cnt_center_slim {
+	width: 98%;
+	margin: none;
+}
+.p_padding_bottom_slim {
+	padding-bottom: 20px;
+}
+.txt_left_slim {
+	text-align: left;
+}
+.content_slim {
+	width: 98%;
+	float: none;
+	text-align: justify;
+}
+.img_1_slim {
+	width: 100%;
+	height: auto;
+	float: none;
+}
+.list_depilation {
+	padding:none;
+}
+
+.img_bihda_thaontt {
+	float: none;
+	width: 100%;
+	height: auto;
+}
+.content_bihda_thaontt {
+	width: 98%;
+	float: none;
+}
+.img1_bihda_thaontt {
+	float: none;
+	width: 100%;
+	height: auto;
+}
+.img_arrow_bihda_thaontt {
+	background: url('../images/bihda/down.png') no-repeat center;
+	float: left;
+	width: 100%;
+	height: 80px;
+	
+}
+.main_img_bihda_thaontt {
+	padding: 10px 0px;
+}
+.img_feeling1_acty_thaontt {
+	float: none;
+	width: 100%;
+	height: auto;
+	margin: 0px auto 10px auto;
+	display: block;
+	}
+.img_feeling2_acty_thaontt {
+	width: 100%;
+	height: auto;
+}
+.group2_act_thaontt {
+	width: 100%;
+}
+.img_effect_acty_thaontt {
+	width: 100%;
+	height: auto;
+}
+.img_hair_thaontt {
+	float: none;
+	height: auto;
+	width: 100%;
+	margin: 0px auto 5px auto;
+	display: block;
+}
+.btn_child {
+	text-align: center;
+}
+ul.list_img_case_thaontt {
+	text-align: center;
+	padding: 5px 0px;
+}
+ul.list_img_case_thaontt li img{
+	max-width: 324px;
+	width: 100%;
+	height: auto;
+}
+
+.img_1_introduction_thaontt {
+	float: none;
+	height: auto;
+	padding-bottom: 10px;
+}
+ul.list_introduction_thaont {
+	padding-left: 30px;
+}
+.img_2_introduction_thaontt {
+	height: auto;
+	float: none;
+	padding-bottom: 10px;
+}
+.img_3_introduction_thaontt {
+	height: auto;
+	float: none;
+	padding: 0px 0px 10px 0px;
+}
+ul.ul_introduction_thaontt {
+	text-align: center;
+}
+.img_hair_button_1 {
+	padding-left: 0px;
+	margin: 0px auto 5px auto;
+	display: block;
+}
+/*end Thao*/	
+
+
+
+/*Tay*/
+div.feminineContent_page1{
+    text-align: center;
+}
+div.feminineContent_page1 p{
+    float: none;
+    width: 100%;
+    text-align: left;
+    max-width: 100%;
+    margin:0;
+
+}
+div.feminineContent_page1 img{
+    float: none;
+    margin: 0 auto;
+	text-align:center;
+	height:auto;	
+}
+p.title_feminineContent_page1{
+    max-width: 90%;
+    text-align: left;
+}
+ul.contentFeminineContent_page1{
+    width: auto;
+}
+ul.contentFeminineContent_page1 li{
+    text-align: left;
+    display: inline-block;
+    width: auto;
+    margin:  0;
+}
+p.content_page1{
+    max-width: 98%;
+    padding: 0 1% 0 1% ;
+}
+
+div.itemContent_page1{
+    max-width: 100%;
+}
+div.itemContent_page1 .title{
+    max-width: 100%;
+}
+dl.itemContent_page1 dd{
+    float: none;
+    text-align: center;
+    max-width: 100%;
+}
+dl.itemContent_page1{
+    max-width: 100%;
+    padding: 0px;
+}
+dl.itemContent_page1 dd img{
+    float: none;
+    text-align: center;
+    max-width: 240px;
+}
+img.notImages_page1{
+    max-width: 240px;
+    text-align: center;
+    float: none;
+}
+p.notImages_page1{
+    float: none;
+    max-width: 98%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 10px;
+}
+div.contentImg_page1{
+    max-width: 100%;
+}
+div.contentImg_page1{
+    text-align: center;
+}
+dl.itemContent_page2{
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+}
+dl.itemContent_page2 dt{
+    max-width: 296px;
+    width: 100%;
+    height: auto;
+    float: left;
+}
+dl.itemContent_page2 dd{
+   float: right;
+   text-align: left;
+   font-size: 12px; 
+}
+dl.itemConten_page2 dt{
+    max-width: 100%;
+}
+dl.itemConten_page2 dt img{
+    text-align: center;
+    float: none;
+}
+p.textContentItem_page2{
+    margin: 0 0 10px 0;
+    
+}
+dl.itemConten_page2 dd{
+    max-width: 100%;
+}
+dl.itemConten_page2 dd p{
+    max-width: 98%;
+    padding: 0 1% 0 1%;
+}
+p.contentItem_page2{
+    max-width: 98%;
+    padding: 0 1% 0 1%;
+}
+a.top1_page2{
+    margin: 0;
+}
+a.top2_page2{
+    margin: 0;
+}
+
+img.imagesInfor_Tay_page3{
+    float: none;
+}
+
+div.infoItemContent_Tay_page3{
+    float: none;
+    max-width: 100%;
+}
+div.infoItemContent_Tay_page3 p{
+    max-width: 100%;
+}
+img.imagesInfor_Tay_page5{
+    float: none;
+}
+div.topItemImages_Tay_page5 img.imgBefore{
+    float: none;
+}
+div.topItemImages_Tay_page5 img.imgAfter{
+    float: none;
+}
+div.botItemImages_Tay_page5 img.imgBefore{
+    float: none;
+}
+div.botItemImages_Tay_page5 img.imgAfter{
+    float: none;
+}
+div.beforeAfter1{
+    float: none;
+    max-width: 100%;
+    height: 80px;
+    background: url(../images/bihda/down.png) no-repeat center center;
+}
+div.beforeAfter2{
+    float: none;
+    max-width: 100%;
+    height: 80px;
+    background: url(../images/bihda/down.png) no-repeat center center;
+}
+div.infoItemContent_Tay_page5{
+    float: none;
+    max-width: 100%;
+}
+div.infoItemContent_Tay_page5 p{
+    float: none;
+    max-width: 100%;
+}
+
+/*end Tay*/
+
+
+
+/*c.Hien*/
+
+.h2_content{
+	padding:0px;
+	width: 98%;
+	margin: none;
+	}
+.padding_h2{	
+	padding-bottom:10px;
+	padding-top:10px;
+	}
+.img_h4_content{
+	float:none;
+	margin:0 auto;
+	width:100%;
+	max-width:240px;
+	height:223px;
+	padding-right: 10px;
+	padding-bottom:10px;
+	}
+.img_arrow {
+	background:url(../images/bihda/down.png) no-repeat center ;
+	width: 100%;
+	height: 100px;
+	float: none;
+	}
+.img_bihda_hient {
+	margin: 0 auto;
+	display:block;
+	width: 100%;
+	float: none;
+	height: auto;
+	max-width: 300px;
+	}
+.img_content1{	
+	padding-bottom:30px;
+	}
+.img2_bihda_hient{
+	margin: 0 auto;
+	display:block;
+	float: none;
+	width: 100%;
+	max-width: 300px;
+	height: auto;
+	}
+.img2_arrow {
+	background:url(../images/bihda/down.png) no-repeat center ;
+	width: 100%;
+	height: 100px;
+	float: none;
+	}
+	/* page 7*/
+.h4_img_left{
+	margin: 0 auto;
+	display:block;
+	float:none;
+	width:100%;
+	max-width:300px;
+	height:200px;
+	}
+.h4_right{
+	
+	float:none;
+	margin: 10px auto;
+	display:block;
+	text-align:center;
+	width:100%;
+	}
+/*end Hien*/
+
+
+
+/*Nguyet*/
+div.content_case {
+	width:100%;
+}
+ul.photos_case, ul.photos_case_2 {
+	text-align:center;
+	width:100%;
+}
+ul.photos_case li img{
+	margin: 5px auto;
+	
+	}
+p.content_2_case {
+	margin:0px 0px 15px 0px ;
+	}
+p.content_right_case {
+	width:96%;
+}
+div.content_1_nguyet {
+	width:100%;
+	height:auto;
+	}
+p.content_left_nguyet{
+	float:none;
+	width:100%;
+	text-align:left;
+}
+div.content_1_nguyet img {
+	float:none;
+	margin:0 auto;
+}
+ul.list_square_nguyet {
+	}
+img.img_right {
+	float:none;
+	margin:0 auto;
+	}
+img.img_left {
+	float:none;
+	margin:0 auto;
+	}
+.icon_bihda_nguyet {
+	background: url('../images/bihda/down.png') no-repeat center;
+	float: none;
+	height: 100px;
+	margin:0 auto;
+	text-align:center;	
+}
+.img_bihda_nguyet {
+	float:none;
+	}
+/*end Nguyet*/
+
+
+
+/*=======Trivt=========*/
+div.MenuQa ul{
+	text-align: center !important;
+}
+
+.Recruit_TopNews .Recruit_img_r{
+	text-align: center !important;
+}
+
+.Recruit_TopNews .Recruit_img_r p, .Recruit_TopNews .Recruit_img_l p{
+	text-align: left;
+}
+
+.Recruit_TopNews .Recruit_img_l{
+	text-align: center !important;
+}
+.Recruit_TopNews img{
+	float: none !important;
+	margin: 0 auto;
+}
+
+
+.Facial_Service img.Facial_Service_Image{
+	float: none;
+	display: inline-block;
+}
+
+.Facial_Service_Title{
+	text-align: center;
+}
+.Facial_Service .Facial_Service_Detail{
+	float: none;
+	display: inline-block;
+}
+
+/*========end Trivt=======*/
+
+
+/*Hieu*/
+
+
+/*end Hieu*/
+
+
+/*Duy*/
+
+
+img.bigimg_activision
+{
+	height:auto;
+}
+ul.ul_img_access li
+{
+	float:none;
+}
+img.bigimg_access
+{
+	height:auto;
+}
+p.textmap_access
+{
+	text-align:left;
+}
+p.text_access
+{
+	text-align:left;
+	max-width:100%;
+}
+ul.ul_img_access
+{
+	float:none;
+}
+div.box_access
+{
+	margin:0 auto;
+}
+img.img_access
+{
+	height:auto;
+}
+img.img_facial
+{
+	margin: 0 auto;
+	text-align:center;
+	height:auto;
+	float:none;	
+	max-width:100%;
+	width:auto;
+}
+div.text_mid_facial
+{
+	text-align:left;
+	height:auto;
+	float:none;
+	max-width:100%;
+	padding-left:0px;
+}
+img.button_2_facial
+{
+	float:none;
+	max-width: 250px;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	margin: 0 auto;
+}
+/*reruit*/
+div.photo_collection_reruit
+{
+	max-width:100%;
+	text-align:left; 
+}
+p.text_top_reruit
+{
+	max-width:100%;
+	text-align:left; 
+}
+img.img_right_reruit
+{
+	height:auto;
+	float:none;
+	margin:0 auto;
+	text-align:center;
+}
+p.text_mid_left_reruit
+{
+	max-width:100%;
+	float:none;
+	text-align:left; 
+}
+img.img_left_reruit
+{
+	max-width:240px;
+	width:100%;
+	height:160px;
+	float:none;
+}
+p.text_mid_right_reruit
+{
+	max-width:100%;
+	float:none;
+	text-align:left; 
+}
+p.p_text_bot
+{
+	text-align:left;
+	margin-bottom:15px;
+	max-width:100%;
+}
+/*depilation*/
+p.text_black_depilation
+{
+	max-width:100%;
+	width:auto;
+	margin:0 auto 20px auto;
+	text-align:left;
+	padding:0 0px 0 0px ;
+}
+img.img_left_depilation
+{
+	height:auto;
+	margin:5px auto;
+	text-align:center;
+	float:none;
+}
+p.text_right_depilation
+{
+	max-width:100%;
+	float:none;
+	width:auto;
+	text-align:left;
+}
+/*end Duy*/
+
+
+
+}

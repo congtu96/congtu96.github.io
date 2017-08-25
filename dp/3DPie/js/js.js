@@ -5,14 +5,13 @@
 
 /**
 * Data of Module
-* values: value of slice pie
+* values: value of slice pie. Val
 * info: description of slice pie
 * name: name of chart
 */
 var myData = {
-    values: [20, 80],
+    values: [80, 20],
     info: ["Đã đạt", "Chưa đạt", "Binh Thuong"],
-    name: "BIỂU ĐỒ TỔNG QUAN KHUNG NĂNG LỰC"
 };
 
 /**
@@ -25,7 +24,7 @@ var myData = {
 * radius: radius of pie chart
 */
 var setting = {
-    color: ["#6382bf", "#e6655b", "#42b742", "green", "#e42a1d", "#4267b1"],
+    color: ["#6382bf", "#e6655b", "#42b742", "green", "#e42a1d", "#00BCD4"],
     height: 100,
     space: 30,
     lineColor: ["#6382bf", "#e6655b"],
@@ -40,7 +39,7 @@ var pie3D = (function() {
 	// Private
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
-    canvas.height = 500;
+    canvas.height = 400;
     canvas.width = 800;
     var data = [];
     var myInfo = [];
@@ -196,9 +195,6 @@ var pie3D = (function() {
             }
             lastPoint += (data[i] / total) * Math.PI * 2;
         }
-        ctx.font = "35px arial";
-        ctx.fillStyle = "blue";
-        ctx.fillText(myData.name, 100, canvas.height * 2);
     }
     
     return {
