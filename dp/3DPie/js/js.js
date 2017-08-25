@@ -1,22 +1,35 @@
 /**
+* 3D PIE CHART
+* Author: fresher Cong Tu
+**/
+
+/**
 * Data of Module
+* values: value of slice pie
+* info: description of slice pie
+* name: name of chart
 */
 var myData = {
-    // Value must Sort up ascending, or bigest value must begin value in array value
-    values: [80, 20],
+    values: [20, 80],
     info: ["Đã đạt", "Chưa đạt", "Binh Thuong"],
     name: "BIỂU ĐỒ TỔNG QUAN KHUNG NĂNG LỰC"
 };
 
 /**
 * Setting option Module
+* color: color slice
+* height: height pie chart
+* space: space between 2 slice
+* lineColor: color of line description
+* widthLine: width of line description
+* radius: radius of pie chart
 */
 var setting = {
     color: ["#6382bf", "#e6655b", "#42b742", "green", "#e42a1d", "#4267b1"],
     height: 100,
     space: 30,
     lineColor: ["#6382bf", "#e6655b"],
-    widthLine: 5,
+    widthLine: 6,
     radius: 0.7,
 };
 
@@ -29,7 +42,32 @@ var pie3D = (function() {
     var ctx = canvas.getContext("2d");
     canvas.height = 500;
     canvas.width = 800;
-    var data = myData.values;
+    var data = [];
+    var myInfo = [];
+    var arrValue = myData.values;
+    
+    /*Sort myData.info follow decrease myData.value*/
+    function sortInfo(info1, info2) {
+          return info2.val - info1.val;
+     }
+    function infoValue(val, info) {
+        this.val = val;
+        this.info = info;
+        this.toString = function() {
+            return this.info;
+        };
+    }
+    var arrInfo = [];
+    for (var i = 0; i < myData.values.length; i++) {
+        arrInfo.push(new infoValue(myData.values[i], myData.info[i]));
+    }
+    arrInfo.sort(sortInfo);
+    for (var i in arrInfo) {
+        myInfo.push(arrInfo[i].info);
+        data.push(arrInfo[i].val);
+    }
+    /*End sort */
+    
     var color = setting.color;
     var total = 0;
     var lastEnd = 0;
@@ -144,7 +182,7 @@ var pie3D = (function() {
                 ctx.moveTo(pX, pY);
                 ctx.lineTo(pX - widthLine * 2, pY - heightLine + data[i]);
                 ctx.stroke();
-                ctx.fillText(info + "%" + myData.info[i], pX - widthLine * 4.5, pY - heightLine - 10 + data[i]);
+                ctx.fillText(info + "%" + myInfo[i], pX - widthLine * 4.5, pY - heightLine - 10 + data[i]);
             }
             // If slice < 50%
             if (info < 50) {
@@ -154,7 +192,7 @@ var pie3D = (function() {
                 ctx.moveTo(pX, pY);
                 ctx.lineTo(pX + widthLine * 2, pY - heightLine + data[i]);
                 ctx.stroke();
-                ctx.fillText(info + "%" + myData.info[i], pX + widthLine * 2, pY - heightLine - 10 + data[i]);
+                ctx.fillText(info + "%" + myInfo[i], pX + widthLine * 2, pY - heightLine - 10 + data[i]);
             }
             lastPoint += (data[i] / total) * Math.PI * 2;
         }
