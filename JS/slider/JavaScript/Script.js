@@ -92,7 +92,7 @@ function getPrevImage() {
     if (CALL == false) {
         return;
     }
-    if (INDEX_CURRENT == 0){
+    if (INDEX_CURRENT == 0) {
         INDEX_CURRENT = LIST_IMG.length - 1;
         setImage( 0);
     }
