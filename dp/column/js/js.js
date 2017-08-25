@@ -21,7 +21,7 @@ var colum = {
     height: [0, 1, 2, 3, 4], 
     name: ["A", "B", "C", "E", "F"],
     value: [2, 0, 3, 4, 4],
-    colorColum: "blue",
+    colorColum: "#2a71d4",
     colorText: "black",
     width: 45,
     distant: 30,
@@ -53,6 +53,7 @@ var columChart = (function() {
             _heightText += colum.distant - 5;
         }
         // Draw info bottom
+        ctx.fillStyle = "#a9a9a9"
         ctx.font = 'Italic 18px Arial';
         ctx.fillText(info.bottom, canvas.width / 3, canvas.height - 5);
         ctx.rotate( - 90 * Math.PI / 180);
@@ -81,6 +82,7 @@ var columChart = (function() {
         var tempValue = addValue - colum.height[colum.height.length - 2]; // Calculation distant value
         var nums = sizeChart - colum.height.length; // number need add
         for (var i = sizeChart - 1; i >= 0; i--) {
+            ctx.strokeStyle = "#597090";
             ctx.moveTo(chartX + 22, (chartY - 8) + tmp);
             ctx.lineTo(chartX + 22 + (size + distant) * (sizeChart - 1), (chartY - 8) + tmp);
             tmp += distantHeight;
@@ -92,12 +94,21 @@ var columChart = (function() {
                 // Auto calculation and fill value not in colum.height
                 ctx.fillText(addValue + tempValue * nums, chartX, chartY + tmp - distantHeight - 5);
                 nums -= 1;
+                ctx.save();
             }
+            
             // Draw line footer
             if (i == 0) {
+                //ctx.strokeStyle = "black";
                 plinthY = chartY + tmp - distantHeight - 5;
                 ctx.moveTo(chartX + 22, plinthY - 2);
                 ctx.lineTo(chartX + 22 + (size + distant) * (sizeChart - 1), plinthY - 2);
+                ctx.moveTo(chartX + 22, plinthY - 2);
+                ctx.lineTo(chartX + 22 + (size + distant) * (sizeChart - 1), plinthY - 2);
+                ctx.moveTo(chartX + 22, plinthY - 3);
+                ctx.lineTo(chartX + 22 + (size + distant) * (sizeChart - 1), plinthY - 3);
+                ctx.moveTo(chartX + 22, plinthY - 3);
+                ctx.lineTo(chartX + 22 + (size + distant) * (sizeChart - 1), plinthY - 3);
             }
         }
         ctx.stroke();

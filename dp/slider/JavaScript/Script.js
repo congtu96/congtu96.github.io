@@ -2,10 +2,10 @@ var slider = (function() {
 	var ARR_IMG = $(".images");//Array image on slide
 	var ARR_IMG_mini = $(".point");//Array image on status bar
 	var ARR_IMG_CURRENT = 0;//Variable index img on slider
-	var TIME_AUTO = 2500;//2.5s
+	var TIME_AUTO = 3000;//2.5s
 	var TIME;// Variable time for slide
 	var CHECK_MOUSE = true;//Check mouseover and mouseout
-	var speed = 500;//speed of effect slider
+	var speed = 1000;//speed of effect slider
 
 	/**
 	* Next image
